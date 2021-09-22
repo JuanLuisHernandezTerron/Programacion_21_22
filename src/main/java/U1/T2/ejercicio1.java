@@ -1,4 +1,4 @@
-package U1.T1;
+package U1.T2;
 //Crea un programa en Java que escriba en pantalla el producto de dos números prefijados.
 
 public class ejercicio1 {

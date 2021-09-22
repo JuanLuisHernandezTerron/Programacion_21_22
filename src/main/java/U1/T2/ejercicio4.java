@@ -1,4 +1,4 @@
-package U1.T1;
+package U1.T2;
 import java.util.Scanner;
 
 //Crea un programa que pida al usuario una longitud en millas (por ejemplo, 3)

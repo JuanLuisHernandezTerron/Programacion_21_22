@@ -1,4 +1,4 @@
-package U1.T1;
+package U1.T2;
 import java.util.Scanner;
 // Crea un programa que calcule y muestre la división de dos números enteros introducidos por el usuario.
 public class ejercicio3 {
