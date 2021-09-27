@@ -9,13 +9,20 @@ public class Ejercicio9 {
         Scanner teclado = new Scanner(System.in);
 
         double cmArboles = 0;
-        double alturasArboles = 0;
+        double arbolAlto = 0;
+        int arbolAux = 0;
 
+        System.out.println("Dime las altura de los arboles");
+        cmArboles = teclado.nextDouble();
         while (cmArboles != -1){
+            arbolAux++;
+
+            if (cmArboles > arbolAlto){
+                arbolAlto = cmArboles;
+            }
             System.out.println("Dime las altura de los arboles");
             cmArboles = teclado.nextDouble();
-
-
         }
+        System.out.println("El arbol mas alto es: "+ arbolAlto + " y  su etiqueta sería "+ arbolAux);
     }
 }
