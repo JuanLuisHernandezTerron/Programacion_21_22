@@ -5,8 +5,6 @@ public class Ejercicio7 {
         int contadorImpar = 0;
         int numero = 0;
 
-
-
         while (contadorImpar <= 10){
             numero ++;
             if( numero % 2 != 0){

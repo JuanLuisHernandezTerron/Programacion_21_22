@@ -17,7 +17,7 @@ public class Ejercicio14 {
         int n = teclado.nextInt();
 
         for (int i = 0; i <= n; i++) {
-            System.out.println();
+            System.out.println("a");
             for (int j = 0; j < n-i ; j++) {
                 System.out.print("*");
             }
