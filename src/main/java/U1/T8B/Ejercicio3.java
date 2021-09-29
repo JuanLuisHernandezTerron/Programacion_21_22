@@ -10,13 +10,15 @@ public class Ejercicio3 {
 
         System.out.print("Dime un numero: ");
         int numeroIntroducido = teclado.nextInt();
-        int sumaAnterior = 0;
-        int sumaNumeros = 0;
-        int contadorNumeros = 0;
+        int numeroAnterior = 1;
+        int copianumeroActual = 0;
+        int numeroActual = 0;
 
         for (int i = 0; i < numeroIntroducido; i++) {
-            contadorNumeros ++;
-
+            System.out.println( numeroActual);
+            copianumeroActual = numeroActual;
+            numeroActual = numeroAnterior + numeroActual;
+            numeroAnterior = copianumeroActual;
         }
     }
 }
