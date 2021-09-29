@@ -30,12 +30,19 @@ public class Ejercicio15 {
         int numeroIntroducido = teclado.nextInt();
 
         int contadorPrimo = 0;
+        int contadorNumeros = 0;
+        boolean es_primo = true;
 
         for (int i = 1; i <= numeroIntroducido ; i++) {
-            for (int j = 2; j <= numeroIntroducido ; j++) {
+            es_primo = true;
+            for (int j = 2; j <= i - 1; j++) {
                 if ( i % j == 0){
-                    contadorPrimo ++;
+                    es_primo = false;
+                    break;
                 }
+            }
+            if (es_primo == true){
+                contadorPrimo ++;
             }
         }
         System.out.println(contadorPrimo);

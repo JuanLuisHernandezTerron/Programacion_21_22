@@ -7,7 +7,7 @@ public class Ejercicio7 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        System.out.println("Dime el numero que quieres que ");
+        System.out.println("Dime el numero que quieres que te muestre al reves: ");
         int numeroIntroducido = teclado.nextInt();
 
         int numeroAux = 0; //Variable que guarda el número al revés.
