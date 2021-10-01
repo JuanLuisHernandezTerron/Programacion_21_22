@@ -20,7 +20,7 @@ public class Ejercicio4 {
 
     int trabajado40H = numeroHoras * 12;
     int restaHoras = numeroHoras - 40;
-    int trabajado41H = (restaHoras * 16) + 432;
+    int trabajado41H = (restaHoras * 16) + 480;
 
     if ((numeroHoras >= 0) && (numeroHoras <= 40)) {
       System.out.print("El sueldo semanal que le corresponde es de: " + trabajado40H);

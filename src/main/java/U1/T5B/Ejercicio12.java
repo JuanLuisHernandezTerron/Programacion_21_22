@@ -15,6 +15,12 @@ public class Ejercicio12 {
     System.out.print("Dime el tercer numero entero: ");
     int numero3 = teclado.nextInt();
 
-    if ((numero1 > numero2) && (numero1 > numero3)) {}
+    if (((numero1 > numero2) && (numero1 > numero3)) && ((numero2 < numero1) &&(numero2 > numero3))){
+      System.out.print("El orden sería: "+ numero1 +" "+ numero2 + " "+ numero3 );
+    }else if (((numero2 > numero1) && (numero2 > numero3)) && ((numero3 < numero2) && (numero3 > numero1))){
+      System.out.print("El orden sería: "+ numero2 +" "+ numero3 + " "+ numero1 );
+    }else {
+      System.out.println("El orden sería: "+ numero3 +" "+ numero1 + " "+ numero2);
+    }
   }
 }

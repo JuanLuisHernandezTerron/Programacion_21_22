@@ -11,17 +11,18 @@ public class Ejercicio10 {
     System.out.print("Dime la hora: ");
     int hora = teclado.nextInt();
 
-    int horasDiferencias = 24 - hora;
+
 
     System.out.print("Dime los minutos: ");
     int minutos = teclado.nextInt();
 
-    int horasAminutos = 0;
-    int minutosAsegundos = 0;
-    horasAminutos = horasDiferencias * 60;
-    minutos = minutos + horasAminutos;
-    minutosAsegundos = minutos * 60;
+    int minutosAsegundos =  minutos * 60;;
+    int horasAsegundos =  hora * 3600;
+    int segundosTotal = minutosAsegundos + horasAsegundos;
+    int segundosMedianoche = (24 * 3600) - segundosTotal;
 
-    System.out.println("Quedan " + minutosAsegundos + "segundos para ser las 12");
+
+
+    System.out.println("Quedan " + segundosMedianoche + " segundos para ser las 12");
   }
 }
