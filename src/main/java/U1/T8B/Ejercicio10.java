@@ -11,10 +11,10 @@ public class Ejercicio10 {
         System.out.println("Dime la altura de la U");
         int altura = teclado.nextInt();
 
-        for (int i = 0; i < altura ; i++) {
+        for (int i = 0; i <= altura; i++) {
             System.out.println("*");
-            for (int j = 0; j < altura; j++) {
-
+            for (int j = 0; j >= altura ; j++) { //espacios blancos
+                System.out.print(" ");
             }
         }
     }
