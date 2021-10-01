@@ -17,8 +17,7 @@ public class Ejercicio3 {
         System.out.println("Dime la segunda nota: ");
         double nota3 = teclado.nextDouble();
 
-        double notaDecimal = ((nota1 + nota2 + nota3) / 3); // Hacemos la media de los 3 numeros.
-        int notaMedia = (int) notaDecimal; // convertimos el numero decimal en entero.
+        int notaMedia = (int) ((nota1 + nota2 + nota3) / 3); // convertimos el numero decimal en entero.
 
         System.out.println("La nota media es: " + notaMedia);
     }
