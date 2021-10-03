@@ -12,7 +12,7 @@ public class Ejercicio9 {
 
         switch (mesNacimiento){
             case 1: if (diaNacimiento < 21){
-                System.out.println("Capricornio");
+                    System.out.println("Capricornio");
             }else{
                 System.out.println("Acuario");
             } break;

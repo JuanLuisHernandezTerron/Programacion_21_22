@@ -19,12 +19,17 @@ public class Ejercicio5 {
         System.out.print("Por favor, introduzca el valor de b: ");
         double b = teclado.nextInt();
 
-        double ecuacionPrimerGrado = b / a;
+        double ecuacionPrimerGrado = 0;
 
-        if (a > b){
-            System.out.print(ecuacionPrimerGrado);
-        }else{
+        if (a == 0){
             System.out.print("Esa ecuación no tiene solución real.");
+        }else{
+            if (b >= 0) {
+                ecuacionPrimerGrado = -b / a;
+            }else {
+                ecuacionPrimerGrado = b / a;
+            }
         }
+        System.out.print(ecuacionPrimerGrado);
     }
 }
