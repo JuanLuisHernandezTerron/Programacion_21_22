@@ -42,7 +42,7 @@ public class Ejercicio20 {
         double ivaReducido = (baseImponible) * 0.10;
         double sumaIva = ivaGeneral + baseImponible;
         double sumaGeneral = ivaReducido + baseImponible;
-        double ivaSuperreducido = (baseImponible) * 0.04;
+        double ivaSuperreducido = (baseImponible) * 0.40;
 
         if ((tipoIVA.equals("general")) && (codigoPromo.equals("nopro"))){
             System.out.println("La base imponible es: "+baseImponible);
