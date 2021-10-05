@@ -25,6 +25,29 @@ import java.util.Scanner;
 //Gana el jugador 1
 public class Ejercicio24 {
     public static void main(String[] args) {
+
         Scanner teclado = new Scanner(System.in);
+
+        System.out.print("Turno del jugador 1 (introduzca piedra, papel o tijera): ");
+        String eleccionJugador1 = teclado.next();
+
+        System.out.print("Turno del jugador 2 (introduzca piedra, papel o tijera): ");
+        String eleccionJugador2 = teclado.next();
+
+        if (eleccionJugador1.equals("piedra") && (eleccionJugador2.equals("papel"))){
+            System.out.println("Ha ganado el jugador nº2");
+        }else if (eleccionJugador1.equals("papel") && (eleccionJugador2.equals("piedra"))){
+            System.out.println("Ha ganado nº1");
+        }else if (eleccionJugador1.equals("tijera") && (eleccionJugador2.equals("papel"))){
+            System.out.println("Ha ganado nº1");
+        }else if (eleccionJugador1.equals("papel") && (eleccionJugador2.equals("tijera"))){
+            System.out.println("Ha ganado nº2");
+        }else if (eleccionJugador1.equals("papel") && (eleccionJugador2.equals("papel"))){
+            System.out.println("Empate");
+        }else if (eleccionJugador1.equals("tijera") && (eleccionJugador2.equals("tijera"))) {
+            System.out.println("Empate");
+        }else if (eleccionJugador1.equals("piedra") && (eleccionJugador2.equals("piedra"))) {
+            System.out.println("Empate");
+        }
     }
 }
