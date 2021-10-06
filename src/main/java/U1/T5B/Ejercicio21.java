@@ -58,13 +58,14 @@ public class Ejercicio21 {
 
         double viajesClientes = numeroDias * 30;
 
-
-
-        switch (numeroCargo){
+      double sueldoBruto = 0;
+      double soltero = 0;
+      double casado = 0;
+              switch (numeroCargo){
             case 1 :
-                double sueldoBruto = salarioJp + viajesClientes;
-                double soltero = (int) (sueldoBruto * 0.25);
-                double casado = (int) (sueldoBruto * 0.20);
+                sueldoBruto = salarioJp + viajesClientes;
+                soltero = sueldoBruto * 0.25;
+                casado = sueldoBruto * 0.20;
                 System.out.println("El salario base es "+salarioPj+" mas la dieta sería: " + sueldoBruto);
                 if (estadoCivil == 1){
                     System.out.print("Tu salario sería: " + (sueldoBruto - soltero));
@@ -74,8 +75,8 @@ public class Ejercicio21 {
                 break;
             case 2 :
                 sueldoBruto = salarioPs + viajesClientes;
-                soltero = (int) (sueldoBruto * 0.25);
-                casado = (int) (sueldoBruto * 0.20);
+                soltero = sueldoBruto * 0.25;
+                casado = sueldoBruto * 0.20;
                 System.out.println("El salario base es "+salarioPs+" mas la dieta sería: " + sueldoBruto);
                 if (estadoCivil == 1){
                     System.out.print("Tu salario sería: " + (sueldoBruto - soltero));
@@ -85,8 +86,8 @@ public class Ejercicio21 {
                 break;
             case 3:
                 sueldoBruto = salarioJp + viajesClientes;
-                soltero = (int) (sueldoBruto * 0.25);
-                casado = (int) (sueldoBruto * 0.20);
+                soltero = sueldoBruto * 0.25;
+                casado = sueldoBruto * 0.20;
                 System.out.println("El salario base es "+salarioJp+" mas la dieta sería: " + sueldoBruto);
                 if (estadoCivil == 1){
                     System.out.print("Tu salario sería: " + (sueldoBruto - soltero));

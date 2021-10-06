@@ -14,32 +14,33 @@ public class Ejercicio14 {
     String posicion = teclado.next();
     System.out.print("Dime que caracter quieres que tenga ");
     String caracter = teclado.next();
-    System.out.print("Dime que altura quieres que tenga la piramide: ");
-    int altura = teclado.nextInt();
+
+    int altura = 3;
 
     switch (posicion) {
-      case "arriba":
-        for (int i = 0; i < altura; i++) {
-          for (int espaciosBlancos = 0; espaciosBlancos < altura - i; espaciosBlancos++) {
-            System.out.print("/");
-          }
-          for (int rellenoPiramide = 0; rellenoPiramide <= i * 2; rellenoPiramide++) {
-            System.out.print(caracter);
-          }
-          System.out.println();
-        }
-        break;
-      case "abajo":
-        for (int i = 0; i < altura; i++) {
-          for (int espaciosBlancos = 0; espaciosBlancos < altura + i; espaciosBlancos++) {
-            System.out.print("/");
-          }
-          for (int rellenoPiramide = 0; rellenoPiramide <= i * 2; rellenoPiramide++) {
-            System.out.print(caracter);
-          }
-          System.out.println();
-        }
-        break;
+        case "arriba":
+            System.out.println("  "+ caracter);
+            System.out.println(" "+caracter+ caracter+caracter);
+            System.out.println(caracter + caracter + caracter + caracter + caracter);
+            break;
+        case "abajo":
+              System.out.println(caracter + caracter + caracter + caracter + caracter);
+              System.out.println(" "+caracter+ caracter+caracter);
+              System.out.println("  "+ caracter);
+            break;
+        case "derecha":
+            System.out.println(caracter);
+            System.out.println(caracter + caracter + caracter );
+            System.out.println(caracter + caracter +caracter + caracter + caracter);
+            System.out.println(caracter+caracter + caracter);
+            System.out.println(caracter);
+            break;
+        case "izquierda":
+            System.out.println("    "+caracter);
+            System.out.println("  " + caracter+caracter+caracter);
+            System.out.println(caracter + caracter +caracter + caracter + caracter);
+            System.out.println("  " + caracter+caracter+caracter);
+            System.out.println("    "+caracter);
     }
   }
 }

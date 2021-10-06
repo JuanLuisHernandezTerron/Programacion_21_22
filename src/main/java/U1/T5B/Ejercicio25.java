@@ -55,6 +55,6 @@ public class Ejercicio25 {
         }else if (bebidaTomada.equals("café")){
             precioBebida = 1.20;
         }
-        System.out.println("El total del desayuno es:"+ (precioPrimerplato + precioBebida));
+        System.out.println("El total del desayuno es: "+ (precioPrimerplato + precioBebida));
     }
 }
