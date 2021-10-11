@@ -18,6 +18,8 @@ public class Ejercicio1 {
                 System.out.print("*");
               } else if (j == altura - 1) {
                 System.out.print("*");
+              }else if ((j > 0) && (j < altura - 1)){
+                  System.out.print(" ");
               }
 
               if ((j > 0) && (j < altura - 1)) {
