@@ -26,12 +26,15 @@ public class Ejercicio2 {
 
             if (edadAlumno >= 18){
                 mayor_edad ++;
+
             }
 
-            System.out.println("La suma de las edades es " + sumaEdades);
-            System.out.println("La media de las edades es " + mediaAlumnos);
-            System.out.println("Hay " + mayor_edad + " mayores de edad");
-
+            if (edadAlumno >= 0) {
+                System.out.println("La suma de las edades es " + sumaEdades);
+                System.out.println("La media de las edades es " + mediaAlumnos);
+                System.out.println("Hay " + mayor_edad + " mayores de edad");
+                System.out.println("Hay "+ contador_alumnos+ " alumnos");
+            }
             contador_alumnos ++; //He puesto el contador de alumnos abajo ya que esta por defecto 1 y si estuviese
                                 // arriba sería 2 y no cuadraría bien los calculos.
         }

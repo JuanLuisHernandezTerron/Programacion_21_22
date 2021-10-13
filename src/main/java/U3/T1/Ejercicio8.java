@@ -9,27 +9,25 @@ public class Ejercicio8 {
         System.out.print("Dime un numero entero: ");
         int numeroIntroducido = teclado.nextInt();
 
-        boolean es_primo = false;
-
-        System.out.println(divisorPrimo(numeroIntroducido, es_primo));
+        System.out.println(divisorPrimo(numeroIntroducido));
     }
 
-    static int divisorPrimo(int numeroIntroducido, boolean es_primo){
-        int contador_divisores_primos = 0;
-        for (int i = 0; i <= numeroIntroducido; i++) {
-            if (numeroIntroducido % i == 0){
-                for (int j = 1; j <= numeroIntroducido  ; j++) {
-                        es_primo = true;
-                    for (int k = 2; k <= j - 1 ; k++) {
-                        contador_divisores_primos ++;
-                        if (j % k ==0){
-                            es_primo = false;
-                            break;
-                        }
+    static int divisorPrimo(int numeroIntroducido){
+        int contadorDivisor= 0;
+        for (int i = 2; i < numeroIntroducido; i++) {
+            boolean es_primo = true;
+            if (numeroIntroducido % i ==0){
+                for (int j = 2; j < i; j++) {
+                    if (i % j == 0){
+                        es_primo = false;
                     }
+                }
+
+                if (es_primo) {
+                    contadorDivisor++;
                 }
             }
         }
-        return contador_divisores_primos;
+        return contadorDivisor;
     }
 }
