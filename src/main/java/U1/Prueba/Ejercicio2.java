@@ -27,30 +27,22 @@ public class Ejercicio2 {
 
         for (int i = 0; i < altura; i++) {
             for (int j = 0; j < altura; j++) {
-               if ( j == altura/2){
+                if ((i==0) || (i==altura-1)){
+                    if ( j == altura/2){
+                        System.out.print("*");
+                    }else{
+                        System.out.print(" ");
+                    }
+                }else if((j == altura/2 - i)){
                    System.out.print("*");
-               }else if (j >= altura/2){
-                   System.out.print(" ");
-               }else if (j == altura/2 - i){
+               }else if (j == altura/2 + i){
                    System.out.print("*");
-               }else if (j > altura/2 + i){
-                   System.out.print("*");
-               }else if ((i == altura/2) && (j == 0)){
-                   System.out.print("*");
-               }else if ((i == altura/2) && (j == altura-1)){
+               }else if(i == altura/2 + j){
                    System.out.print("*");
                }else{
                    System.out.print(" ");
                }
 
-
-               if (j == altura + i){
-                    System.out.print("*");
-               }
-
-                if ((i == altura-1) && (j == altura/2)){
-                    System.out.print("*");
-                }
             }
             System.out.println("");
         }
