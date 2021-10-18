@@ -21,20 +21,20 @@ public class ejercicioV {
         System.out.print("Dime la altura de la V: ");
         int altura = teclado.nextInt();
 
-        while (altura < 3){
+        while (altura < 3) {
             System.out.print("Altura introducida equivocada, introduce de nuevo la altura: ");
             altura = teclado.nextInt();
         }
         for (int i = 0; i < altura; i++) {
-            for (int j = 0; j < altura*2; j++) {
-                if (j < altura/2+i){
-                    System.out.print("***");
-                }else if (j > altura/2-i){
-                    System.out.print("***");
-                }else{
-                    System.out.print(" ");
+            for (int j = 0; j < altura * 2; j++) {
+                    if (j == i) {
+                        System.out.print("***");
+                    } else if (j == altura * 2 - 1 - i) {
+                        System.out.print("***");
+                    }else{
+                        System.out.print(" ");
+                    }
                 }
-            }
             System.out.println();
         }
     }

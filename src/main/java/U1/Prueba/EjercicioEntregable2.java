@@ -20,7 +20,6 @@ public class EjercicioEntregable2 {
         System.out.print("Dime un numero: ");
         long numero = teclado.nextLong();
 
-        long numeroSacado = numero /10;
 
 
 

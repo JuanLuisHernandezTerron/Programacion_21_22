@@ -20,14 +20,13 @@ public class EjercicioEntregable4 {
 
         System.out.print("Dime un numero entero por favor: ");
         int numeroIntroducido = teclado.nextInt();
-        boolean es_primo = true;
 
         for (int i = numeroIntroducido; i < numeroIntroducido+5 ; i++) {
+            boolean es_primo = true;
             for (int j = 2; j < i; j++) {
                     if (i % j == 0){
                         es_primo = false;
-                    }else {
-                        es_primo = true;
+                        break;
                     }
             }
             if (es_primo){
