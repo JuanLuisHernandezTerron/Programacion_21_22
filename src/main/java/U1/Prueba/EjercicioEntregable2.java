@@ -25,8 +25,8 @@ public class EjercicioEntregable2 {
         int contadorImpares = 0;
 
        while (cociente > 0){    //Con este while recorremos un numero de varias cifras y vemos  si es par o no.
-           resto = cociente % 10; //
-           cociente = cociente /10; //
+           resto = cociente % 10;
+           cociente = cociente /10;
 
            if (resto % 2 == 0){
                contadorPares ++;

@@ -19,7 +19,7 @@ public class EjercicioEntregable3 {
         Scanner teclado = new Scanner(System.in);
 
         System.out.print("Dime el numero que quieres insertar: ");
-        int numeroIntroducido = teclado.nextInt();
+        long numeroIntroducido = teclado.nextLong();
 
         System.out.print("Introduzca la posición donde quiere insertar: ");
         int posicion = teclado.nextInt();
@@ -27,12 +27,30 @@ public class EjercicioEntregable3 {
         System.out.print("Introduzca el dígito que quiere insertar: ");
         int digitoIntroducir = teclado.nextInt();
 
-        int cociente = numeroIntroducido;
-        int resto = 0;
+        long cociente = numeroIntroducido;
+        long resto = 0;
+        long numeroAux = 0;
+        int contador = 0;
 
-        while ( cociente > 0) {
+        while (cociente > 0){
             resto = cociente % 10;
-            cociente = cociente / 10;
+            cociente = cociente /10;
+            numeroAux = numeroAux + resto;
+            numeroAux = numeroAux * 10 ;
+
         }
+
+        while (numeroAux > 0){
+            resto = numeroAux % 10;
+            numeroAux = numeroAux /10;
+            cociente = cociente + resto;
+            cociente = cociente * 10 ;
+            if (contador==posicion){
+                cociente = cociente + digitoIntroducir;
+                cociente = cociente * 10 ;
+            }
+            contador++;
+        }
+        System.out.print(cociente/10);
     }
 }

@@ -15,10 +15,9 @@ public class Ejercicio2 {
         System.out.println(fraseconcatAux);
 
         while (!palabra.equalsIgnoreCase("fin")){
+            fraseconcatAux += " "+palabra;
             System.out.print("Dime varias palabras: ");
             palabra = teclado.nextLine();
-
-            fraseconcatAux += " "+palabra;
         }
         System.out.println(fraseconcatAux);
     }
