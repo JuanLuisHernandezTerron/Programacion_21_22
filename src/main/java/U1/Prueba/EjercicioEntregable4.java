@@ -30,9 +30,9 @@ public class EjercicioEntregable4 {
                     }
             }
             if (es_primo){
-                System.out.println("El numero "+ i +" es" + " primo");
+                System.out.println("El numero "+ i +" es primo");
             }else{
-                System.out.println("El numero "+ i +" es" + " no primo");
+                System.out.println("El numero "+ i +" es no primo");
             }
         }
     }

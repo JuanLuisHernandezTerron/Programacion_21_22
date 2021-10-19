@@ -18,10 +18,22 @@ public class EjercicioEntregable2 {
         Scanner teclado = new Scanner(System.in);
 
         System.out.print("Dime un numero: ");
-        long numero = teclado.nextLong();
+        long numeroIntroducido = teclado.nextLong();
+        long cociente = numeroIntroducido;
+        long resto = 0;
+        int contadorPares = 0;
+        int contadorImpares = 0;
 
+       while (cociente > 0){    //Con este while recorremos un numero de varias cifras y vemos  si es par o no.
+           resto = cociente % 10; //
+           cociente = cociente /10; //
 
-
-
+           if (resto % 2 == 0){
+               contadorPares ++;
+           }else{
+               contadorImpares ++;
+           }
+       }
+        System.out.println("El numero "+numeroIntroducido+ " tiene "+ contadorPares + " numeros pares y " + contadorImpares + " numeros impares");
     }
 }
