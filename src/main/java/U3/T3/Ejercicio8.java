@@ -17,31 +17,40 @@ public class Ejercicio8 {
         System.out.print("Dime el mensaje: ");
         String mensaje = teclado.nextLine();
 
-        String saludoJavalin = "Javalin,javalón";
-        String saludoJavalen = "Javalén,len,len";
-
+        String saludoJavalin = "Javalin, javalón";
+        String saludoJavalen = "Javalén, len, len";
+        String mensajeGuardado = "";
+        String mensajeGuardadoJavalin = "";
+        String mensajeGuardado2 = "";
+        int longitudJavalin = saludoJavalin.length();
+        int longitudJavalen = saludoJavalen.length();
         int longitudMensaje = mensaje.length();
-        int longitudSaludo1 = saludoJavalin.length();
-        int longitudSaludo2 = saludoJavalen.length();
-        boolean es_cierto = true;
 
-        for (int i = 0; i < 15; i++) {
-            String recorrerMensaje = String.valueOf(mensaje.charAt(i));
-            for (int j = 0; j < longitudSaludo1; j++) {
-                String recorrerSaludo1 = String.valueOf(saludoJavalin.charAt(i));
-                for (int k = 0; k < longitudSaludo2 ; k++) {
-                    String recorrerSaludo2 = String.valueOf(saludoJavalen.charAt(i));
-
-                    if ((recorrerMensaje == recorrerSaludo1) || (recorrerMensaje==recorrerSaludo2)){
-                            break;
-                    }else{
-                        es_cierto = false;
-                    }
-                }
-            }
-            if (es_cierto){
-                System.out.print(mensaje);
-            }
+        for (int i = 0; i < longitudMensaje; i++) {
+           if (i < longitudJavalin){
+               String recorreMensaje = String.valueOf(mensaje.charAt(i));
+               mensajeGuardado = mensajeGuardado + recorreMensaje;
+           }else{
+               String recorreMensaje = String.valueOf(mensaje.charAt(i));
+               mensajeGuardadoJavalin = mensajeGuardadoJavalin + recorreMensaje;
+           }
         }
+
+//        for (int j = 0; j > longitudMensaje-17; j++) {
+//            String recorrerMensaje2 = String.valueOf(mensaje.charAt(j));
+//            System.out.print(recorrerMensaje2);
+//        }
+
+        if (mensajeGuardado.equalsIgnoreCase(saludoJavalin)){
+            System.out.print(mensajeGuardadoJavalin);
+        }else{
+            System.out.print("No es un idioma de javalandía");
+        }
+
     }
 }
+
+//for (int j = 0; j < longitudJavalen; j--) {
+//        String recorrerMensaje2 = String.valueOf(mensaje.charAt(j));
+//        }
+
