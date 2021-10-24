@@ -21,10 +21,13 @@ public class Ejercicio8 {
         String saludoJavalen = "Javalén, len, len";
         String mensajeGuardado = "";
         String mensajeGuardadoJavalin = "";
-        String mensajeGuardado2 = "";
         int longitudJavalin = saludoJavalin.length();
         int longitudJavalen = saludoJavalen.length();
         int longitudMensaje = mensaje.length();
+        String javalen_len = mensaje.substring(longitudMensaje-longitudJavalen,longitudMensaje);
+        int longitud_javalen = javalen_len.length();
+
+
 
         for (int i = 0; i < longitudMensaje; i++) {
            if (i < longitudJavalin){
@@ -35,14 +38,12 @@ public class Ejercicio8 {
                mensajeGuardadoJavalin = mensajeGuardadoJavalin + recorreMensaje;
            }
         }
+        int longitud_mensajeGuardado = mensajeGuardadoJavalin.length();
 
-//        for (int j = 0; j > longitudMensaje-17; j++) {
-//            String recorrerMensaje2 = String.valueOf(mensaje.charAt(j));
-//            System.out.print(recorrerMensaje2);
-//        }
 
-        if (mensajeGuardado.equalsIgnoreCase(saludoJavalin)){
-            System.out.print(mensajeGuardadoJavalin);
+        if (mensajeGuardado.equalsIgnoreCase(saludoJavalin) && (javalen_len.equalsIgnoreCase(saludoJavalen))){
+            String mensajeFinal = mensajeGuardadoJavalin.substring(0,longitud_mensajeGuardado-longitud_javalen);
+            System.out.print(mensajeFinal);
         }else{
             System.out.print("No es un idioma de javalandía");
         }
@@ -54,3 +55,7 @@ public class Ejercicio8 {
 //        String recorrerMensaje2 = String.valueOf(mensaje.charAt(j));
 //        }
 
+//        for (int j = 0; j > longitudMensaje-longitudJavalen; j++) {
+//            String recorrerMensaje2 = String.valueOf(mensaje.charAt(j));
+//            System.out.print(recorrerMensaje2);
+//        }
