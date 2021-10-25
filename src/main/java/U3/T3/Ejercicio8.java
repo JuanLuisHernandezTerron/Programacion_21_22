@@ -10,6 +10,7 @@ import java.util.Scanner;
 // Se pide diseñar un traductor que, en primer lugar, nos diga si la frase está escrita en el
 // idioma de Javalandia (en cualquiera de sus dialectos), y en caso afirmativo, nos muestre el
 // mensaje sin muletillas.
+
 public class Ejercicio8 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
@@ -38,8 +39,8 @@ public class Ejercicio8 {
                mensajeGuardadoJavalin = mensajeGuardadoJavalin + recorreMensaje;
            }
         }
-        int longitud_mensajeGuardado = mensajeGuardadoJavalin.length();
 
+        int longitud_mensajeGuardado = mensajeGuardadoJavalin.length();
 
         if (mensajeGuardado.equalsIgnoreCase(saludoJavalin) && (javalen_len.equalsIgnoreCase(saludoJavalen))){
             String mensajeFinal = mensajeGuardadoJavalin.substring(0,longitud_mensajeGuardado-longitud_javalen);

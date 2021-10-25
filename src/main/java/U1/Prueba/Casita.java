@@ -2,7 +2,7 @@ package U1.Prueba;
 //CASA CON 10 DE ALTURA
 public class Casita {
     public static void main(String[] args) {
-        int altura = 15;
+        int altura = 5;
 
         for (int i = 0; i < altura; i++) {
             for (int j = 0; j < altura; j++) {

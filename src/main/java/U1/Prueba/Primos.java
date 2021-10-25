@@ -18,9 +18,9 @@ public class Primos {
                 }
             }
             if (es_primo){
-                System.out.println("El numero "+ i + " es primo");
+                System.out.println("Los numeros primos son: " +i );
             }else{
-                System.out.println("El numero "+ i + " es no primo");
+                System.out.println("Y los no primos son: " +i);
             }
         }
     }
