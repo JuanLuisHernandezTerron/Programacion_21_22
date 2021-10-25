@@ -44,7 +44,7 @@ public class Ejercicio8 {
 
         if (mensajeGuardado.equalsIgnoreCase(saludoJavalin) && (javalen_len.equalsIgnoreCase(saludoJavalen))){
             String mensajeFinal = mensajeGuardadoJavalin.substring(0,longitud_mensajeGuardado-longitud_javalen);
-            System.out.print(mensajeFinal);
+            System.out.print(mensajeFinal.trim());
         }else{
             System.out.print("No es un idioma de javalandía");
         }
