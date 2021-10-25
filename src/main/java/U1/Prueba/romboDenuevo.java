@@ -9,7 +9,7 @@ public class romboDenuevo {
         System.out.print("Dime la altura que quieres: ");
         int altura = teclado.nextInt();
 
-            for (int i = 0; i <= altura/2; i++) {
+            for (int i = 0; i < altura/2; i++) {
                 for (int j = 0; j < altura; j++) {
                     if (j == altura / 2 - i) {
                     System.out.print("*");
@@ -21,7 +21,7 @@ public class romboDenuevo {
                 }
             System.out.println();
         }
-        for (int i = 0; i < altura/2; i++) {
+        for (int i = 0; i <= altura/2; i++) {
             for (int j = 0; j < altura; j++) {
                     if ( i==j ) {
                         System.out.print("*");
