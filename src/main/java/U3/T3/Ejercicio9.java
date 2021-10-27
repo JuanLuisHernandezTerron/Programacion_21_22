@@ -42,15 +42,44 @@ public class Ejercicio9 {
 
         int numeroChiclana = 5000;
 
-        alabi.replace(0,longitudAlabi,"Chicharrones de Chiclana");
+        alabi.replace(0,longitudAlabi,"Chicharrones");
         System.out.println(alabi);
 
         alabi.insert(0, "Hay");
         alabi.insert(3," "+numeroChiclana+" ");
         System.out.println(alabi);
 
+        alabi.insert(alabi.length()," en chiclana");
+        System.out.println(alabi);
 
+        System.out.println(alabi.substring(alabi.length()-4,alabi.length()));
+        System.out.println("Capacidad Final: " + alabi.capacity());
+        System.out.println("Longitud Final: " + alabi.length());
 
+        //StringBuffer
+
+        System.out.println("**********************************************************");
+
+        StringBuffer alabiBuffer = new StringBuffer("Alabí Alixar Buffer");
+
+        System.out.println("El StringBuffer es: "+alabiBuffer);
+        System.out.println("Su capacidada inicial: "+ alabiBuffer.capacity());
+        System.out.println("Su longitud es: " + alabiBuffer.length());
+        int numeroChicharrone = 5000;
+
+        alabiBuffer.replace(0,alabiBuffer.length(),"Chicharrones");
+        System.out.println(alabiBuffer);
+
+        alabiBuffer.insert(0, "Hay");
+        alabiBuffer.insert(3," "+numeroChicharrone+" ");
+        System.out.println(alabiBuffer);
+
+        alabiBuffer.insert(alabiBuffer.length()," en chiclana");
+        System.out.println(alabiBuffer);
+
+        System.out.println(alabi.substring(alabiBuffer.length()-4,alabiBuffer.length()));
+        System.out.println("Capacidad Final: " + alabiBuffer.capacity());
+        System.out.println("Longitud Final: " + alabiBuffer.length());
 
 
     }
