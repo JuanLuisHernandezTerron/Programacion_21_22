@@ -1,24 +1,31 @@
 package U3.T3;
-//Introducir por teclado una frase palabra a palabra, y mostrar la
-// frase completa separando las palabras introducidas con espacios en blanco.
-// Terminar de leer la frase cuando la palabra introducida sea "fin" escrita con cualquier
-// combinación de mayúsculas/minúsculas. La cadena "fin" no aparecerá en la frase final.
 
+import java.util.Arrays;
 import java.util.Scanner;
 
+//Escribir una aplicación que solicite al usuario cuántos números desea introducir.
+// A continuación, se introducirá por teclado esa cantidad de números enteros, y por último,
+// los mostrará en el orden inverso al introducido.
 public class Ejercicio2 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        String  palabra = "";
-        String  fraseconcatAux = "";
-        System.out.println(fraseconcatAux);
+        System.out.print("Cuantos numeros quieres introducir: ");
+        int numerosIntroducir = teclado.nextInt();
 
-        while (!palabra.equalsIgnoreCase("fin")){
-            fraseconcatAux += " "+palabra;
-            System.out.print("Dime varias palabras: ");
-            palabra = teclado.nextLine();
+        int espaciosArray[] = new int[numerosIntroducir];
+        int ArrayAUX[] = new int[numerosIntroducir];
+
+        for (int i = 0; i < numerosIntroducir; i++) {
+            System.out.print("Dime un numero: ");
+            espaciosArray[i] = teclado.nextInt();
         }
-        System.out.println(fraseconcatAux);
+
+        for (int i = 0; i < numerosIntroducir; i++) {
+            ArrayAUX[numerosIntroducir-i-1] = espaciosArray[i];
+        }
+
+        System.out.println(Arrays.toString(ArrayAUX));
+
     }
 }

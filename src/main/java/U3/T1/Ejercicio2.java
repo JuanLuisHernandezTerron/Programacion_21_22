@@ -14,18 +14,20 @@ public class Ejercicio2 {
         System.out.print("Dime otro numero entero");
         int numero2 = teclado.nextInt();
 
+        while(numero1 > numero2){
+            System.out.print("Dime un numero entero");
+             numero1 = teclado.nextInt();
+
+            System.out.print("Dime otro numero entero");
+             numero2 = teclado.nextInt();
+        }
         numeroEnteros(numero1 , numero2);
+
     }
     static void numeroEnteros(int numero1, int numero2){
 
-        if (numero1 > numero2) {
-            for (int i = numero1; i <= numero2; i++) {
-                System.out.println(i);
-            }
-        }else{
-            for (int i = numero2; i <= numero1; i++) {
-                System.out.println(i);
-            }
+        for (int i = numero1; i <= numero2; i++) {
+            System.out.println(i);
         }
     }
 }

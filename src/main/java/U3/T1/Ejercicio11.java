@@ -12,5 +12,10 @@ public class Ejercicio11 {
 
         System.out.print("Dime n: ");
         int n = teclado.nextInt();
+
     }
+    static void potencia (float a, int n){
+
+    }
+
 }

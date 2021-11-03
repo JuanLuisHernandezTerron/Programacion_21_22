@@ -15,8 +15,7 @@ public class Ejercicio5 {
         System.out.print("Dime otro numero entero: ");
         int numero3 = teclado.nextInt();
 
-        int mayor=mayorOmenor(numero1,numero2);
-        System.out.println(mayorOmenor(numero3,mayor));
+        System.out.println(mayorOmenor(numero3,mayorOmenor(numero1,numero2)));
     }
     static int mayorOmenor(int numero1, int numero2){
         if (numero1 > numero2){
