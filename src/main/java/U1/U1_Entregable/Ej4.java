@@ -74,7 +74,7 @@ public class Ej4 {
             System.out.println(primeros3+ " no es primo");
         }
 
-        es_primo = false;
+        es_primo = true;
         for (int k = 2; k < segundos3; k++) {
                 if ( segundos3 % k == 0){
                     es_primo = false;
