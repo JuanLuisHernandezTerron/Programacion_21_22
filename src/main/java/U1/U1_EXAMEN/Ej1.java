@@ -31,7 +31,7 @@ public class Ej1 {
                     System.out.print("*");
                 }else if(j == altura+i){
                     System.out.print("*");
-                }else if((i == altura/2+1) && (j > 1) && (j < altura*2-1)){
+                }else if((i == altura/2-1) && (j > 1) && (j < altura*2-1)){
                     System.out.print("*");
                 }else if(j == altura*2+2){
                     System.out.print("*");
