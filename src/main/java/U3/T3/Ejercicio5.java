@@ -11,34 +11,29 @@ public class Ejercicio5 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        int []espacioArray = {1,6,5,9,2,7};
-        int []espacioArray2 = {7,5,6,7,2,3};
-        int []arrayOrdenado = new int [espacioArray.length + espacioArray2.length];
-        System.arraycopy(espacioArray,0,arrayOrdenado,0,espacioArray.length);
-        System.arraycopy(espacioArray2,0,arrayOrdenado,espacioArray2.length,espacioArray2.length);
-        ordenarArrays(espacioArray);
-        ordenarArrays(espacioArray2);
-        ordenarArrays(arrayOrdenado);
-    }
+        int[] array = {2, 3, 6, 8, 9, 10};  //i
+        int[] array2 = {5, 7, 1, 12, 11, 4}; //j
+        int[] arrayvacio = new int[array.length + array2.length];
+        int i = 0;
+        int j = 0;
 
-    private static void ordenarArrays(int[] arrays) {
-        boolean es_Ordenado = false;
-
-        while (es_Ordenado == false){
-            int contadorCambios = 0;
-            for (int i = 0; i < arrays.length-1; i++) {
-                if (arrays[i] > arrays[i+1]){
-                    int numAUX = arrays[i];
-                    arrays[i] = arrays[i+1];
-                    arrays[i+1] = numAUX;
-                    contadorCambios ++;
-                }
-            }
-
-            if (contadorCambios == 0){
-                es_Ordenado = true;
+        Arrays.sort(array);
+        Arrays.sort(array2);
+        for (int k = 0; k < arrayvacio.length; k++) {
+            if (i < array.length && j == array.length) {
+                arrayvacio[k] = array[i];
+                i++;
+            } else if (j < array.length && i == array.length) {
+                arrayvacio[k] = array2[j];
+                j++;
+            } else if (array[i] < array2[j]) {
+                arrayvacio[k] = array[i];
+                i++;
+            } else {
+                arrayvacio[k] = array2[j];
+                j++;
             }
         }
-        System.out.println(Arrays.toString(arrays));
+        System.out.println(Arrays.toString(arrayvacio));
     }
 }
