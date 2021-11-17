@@ -1,6 +1,5 @@
 package U3.T3extra;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -19,14 +18,18 @@ public class Ejercicio1 {
         System.out.println(Arrays.toString(arrayRellenar(arrayNumeros)));
         System.out.println("Que numero quieres destacar? (1 – mínimo, 2 – máximo):");
         int numeroDestacar = teclado.nextInt();
+        int numeroAux = sacarMinimoMaximo(arrayNumeros,numeroDestacar);
+        String arrayString = "[";
 
         for (int i = 0; i < arrayNumeros.length; i++) {
-            if (arrayNumeros[i] == sacarMinimoMaximo(arrayNumeros,numeroDestacar)){
-
+            if (arrayNumeros[i] == numeroAux){
+                arrayString = arrayString + "**"+arrayNumeros[i]+"**"+",";
             }else{
-
+                arrayString = arrayString+arrayNumeros[i] + ", ";
             }
         }
+
+        System.out.println(arrayString+"]");
 
 
     }
@@ -43,14 +46,11 @@ public class Ejercicio1 {
         int [] arrayVacio = new int[100];
         arrayVacio = Arrays.copyOf(array,100);
         Arrays.sort(arrayVacio);
-         // String arrayString = Arrays.toString(arrayVacio);
-        int numeroPequeño = arrayVacio[0];
-        int numeroGrande = arrayVacio[arrayVacio.length];
 
         if (numeroDestacar == 1){
-            return numeroPequeño;
+            return arrayVacio[0];
         }else{
-            return numeroGrande;
+            return arrayVacio[arrayVacio.length-1];
         }
     }
 
