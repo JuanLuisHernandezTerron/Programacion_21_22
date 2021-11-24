@@ -1,5 +1,6 @@
 package U3.T3extra;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 //Escribe un programa que, dada una posición en un tablero de ajedrez, nos diga a qué casillas podría
@@ -24,6 +25,7 @@ public class Ejercicio4 {
             }
             System.out.println();
         }
+
 
         switch (letraNumero){
             case "a":
@@ -51,16 +53,97 @@ public class Ejercicio4 {
                 numeroJ = 8;
                 break;
         }
-        System.out.println(numeroJ +""+enteroRest);
+        System.out.println("Estos son las posiciones donde puede ir el alfil: ");
+        lado_izquierdo_Arriba(enteroRest, numeroJ);
+        lado_derecho_Abajo(enteroRest, numeroJ);
+        lado_derecho_Arriba(enteroRest,numeroJ);
+        lado_izquierdo_Abajo(enteroRest,numeroJ);
+
+
     }
 
+    private static void lado_izquierdo_Arriba(int enteroRest, int numeroJ) {
+        int contadorFila = numeroJ -1;
+        int contadorAltura = enteroRest +1;
+        while ((contadorFila >= 1 && contadorFila <=8) && (contadorAltura >=1 && contadorAltura <=8)){//Lado Izquierdo Arriba
+            System.out.print(getLetra(contadorFila)+""+contadorAltura+" ");
+            contadorFila --;
+            contadorAltura ++;
+        }
+        System.out.println();
+    }
+
+    private static void lado_derecho_Abajo(int enteroRest, int numeroJ) {
+        int contadorFila = numeroJ+1;
+        int contadorAltura = enteroRest -1;
+        while ((contadorFila >= 1 && contadorFila <=8) && (contadorAltura >=1 && contadorAltura <=8)){//Lado Derecho Abajo
+            System.out.print(getLetra(contadorFila)+""+contadorAltura+" ");
+            contadorFila ++;
+            contadorAltura --;
+        }
+        System.out.println();
+    }
+
+    private static void lado_derecho_Arriba(int enteroRest, int numeroJ) {
+        int contadorFila = numeroJ+1;
+        int contadorAltura = enteroRest +1;
+        while ((contadorFila >= 1 && contadorFila <=8) && (contadorAltura >=1 && contadorAltura <=8)){//Lado Derecho Arriba
+            System.out.print(getLetra(contadorFila)+""+contadorAltura+" ");
+            contadorFila ++;
+            contadorAltura ++;
+        }
+        System.out.println();
+    }
+
+    private static void lado_izquierdo_Abajo(int enteroRest, int numeroJ) {
+        int contadorFila = numeroJ-1;
+        int contadorAltura = enteroRest -1;
+        while ((contadorFila >= 1 && contadorFila <=8) && (contadorAltura >=1 && contadorAltura <=8)){//Lado Derecho Abajo
+            System.out.print(getLetra(contadorFila)+""+contadorAltura+" ");
+            contadorFila --;
+            contadorAltura --;
+        }
+        System.out.println();
+    }
+
+
+    private static String getLetra(int numeroLetra){
+        String letra = "";
+        switch (numeroLetra){
+            case 1:
+                letra = "a";
+                break;
+            case 2:
+                letra = "b";
+                break;
+            case 3:
+                letra = "c";
+                break;
+            case 4:
+                letra = "d";
+                break;
+            case 5:
+                letra = "e";
+                break;
+            case 6:
+                letra = "f";
+                break;
+            case 7:
+                letra = "g";
+                break;
+            case 8:
+                letra = "h";
+                break;
+        }
+        return letra;
+    }
 
 
     private static void rellenarArray(String [][] array) {
         int contadorFilas = 8;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                array[i][j] = contadorFilas + "" + (j+1);
+                array[i][j] =  getLetra(j+1)+ "" + (contadorFilas);
             }
             contadorFilas --;
         }
