@@ -13,8 +13,8 @@ public class ejercicio4_entregable_Tarde {
         rellenarArray(arrayRelleno);
         System.out.println("Dime una posicion: ");
         String numeroIntroducido = teclado.next();
-        int fila = Integer.parseInt(numeroIntroducido.substring(0, 1));
-        int columna = Integer.parseInt(numeroIntroducido.substring(2, 3));
+        int fila = Integer.parseInt(numeroIntroducido.substring(0, 1))-1;
+        int columna = Integer.parseInt(numeroIntroducido.substring(2, 3))-1;
         int contadorBombas = comprobarIzquierdaAbajo(arrayRelleno, fila, columna)
                             +comprobarIzquierdaArriba(arrayRelleno, fila, columna)
                             +comprobarIzquierda(arrayRelleno, fila, columna)
