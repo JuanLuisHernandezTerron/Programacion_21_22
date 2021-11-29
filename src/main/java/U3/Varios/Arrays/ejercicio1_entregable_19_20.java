@@ -82,11 +82,10 @@ public class ejercicio1_entregable_19_20 {
 
     private static void introducirMesas(int[][] arrayMesas, int clientela) {
         int contadorLleno = 0;
-        boolean esta_lleno = false;
 
         for (int i = 0; i < arrayMesas.length; i++) {
+            boolean esta_lleno = false;
             for (int j = 0; j < arrayMesas[i].length; j++) {
-                if (contadorLleno != 10) {
                     if (arrayMesas[i][j] == 4){
                         contadorLleno ++;
                     }
@@ -96,13 +95,14 @@ public class ejercicio1_entregable_19_20 {
                             break;
                         }
                     }
-                }
-                if (contadorLleno == 10){
-                    clientela = -1;
-                }
+                    if (contadorLleno == 10){
+                        esta_lleno = true;
+                    }
+            }
+            if (esta_lleno){
+                clientela = -1;
             }
         }
-
     }
 
     private static void rellernarArray(int[][] arrayMesas) {

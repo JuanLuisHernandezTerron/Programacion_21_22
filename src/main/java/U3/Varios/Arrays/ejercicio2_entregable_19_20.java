@@ -1,0 +1,67 @@
+package U3.Varios.Arrays;
+//Escribe un programa que pida 20 números enteros. Estos números se deben
+//introducir en un array de 4 filas por 5 columnas. El programa mostrará las
+//sumas parciales de filas y columnas igual que si de una hoja de cálculo se
+//tratara. La suma total debe aparecer en la esquina inferior derecha.
+public class ejercicio2_entregable_19_20 {
+    public static void main(String[] args) {
+        int [][] arrayTotal = new int [4][5];
+        rellenarArray(arrayTotal);
+        sumaArrayFila(arrayTotal);
+        System.out.println("---------------------------------------");
+        sumaArrayColumnas(arrayTotal);
+        sumaTotal(arrayTotal);
+    }
+
+    private static void sumaTotal(int[][] arrayTotal) {
+        int sumaTotal = 0;
+        for (int i = 0; i < arrayTotal.length; i++) {
+            for (int j = 0; j < arrayTotal.length; j++) {
+                sumaTotal = arrayTotal[i][j] + sumaTotal;
+            }
+        }
+        System.out.print(" | " + " | ");
+    }
+
+    private static void sumaArrayColumnas(int[][] arrayTotal) {
+        int sumaColumnas = 0;
+        int contadorColumnas = 0;
+        int sumatotal = 0;
+        sumaArrayFila(arrayTotal);
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+
+            }
+            sumatotal = sumatotal+sumaColumna(arrayTotal,i);
+            System.out.print(" | " + sumaColumna(arrayTotal,i) + " | ");
+        }
+    }
+    static int sumaColumna (int [][] array , int i){
+        int sumacolumna = 0;
+        for (int j = 0; j < array.length; j++) {
+            sumacolumna = array[j][i] + sumacolumna;
+        }
+        return sumacolumna;
+    }
+
+    private static void sumaArrayFila(int[][] arrayTotal) {
+
+        for (int i = 0; i < arrayTotal.length; i++) {
+            int sumaTotal = 0;
+            for (int j = 0; j < arrayTotal[i].length; j++) {
+                System.out.print(" | " + arrayTotal[i][j] + " | ");
+                sumaTotal = arrayTotal[i][j] + sumaTotal;
+            }
+            System.out.println(sumaTotal);
+        }
+    }
+
+
+    private static void rellenarArray(int[][] arrayTotal) {
+        for (int i = 0; i < arrayTotal.length; i++) {
+            for (int j = 0; j < arrayTotal[i].length; j++) {
+                arrayTotal[i][j] = (int) (Math.random()*101);
+            }
+        }
+    }
+}
