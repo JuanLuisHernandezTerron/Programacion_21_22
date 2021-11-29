@@ -44,5 +44,7 @@ public class ejercicio1_entregable_Manana {
             }
         }
         return arrayAux;
+
+        //i++ quiere decir que primero hace la operacion y luego te suma la i, en cambio, el ++i , te suma la i y luego hace la operacion.
     }
 }
