@@ -14,16 +14,15 @@ public class ejercicio2_entregable_19_20 {
     }
 
     private static void sumaTotal(int[][] arrayTotal) {
-        int sumaTotal = 0;
+
+        int total = 0;
         for (int i = 0; i < arrayTotal.length; i++) {
-            for (int j = 0; j < arrayTotal.length; j++) {
-                sumaTotal = arrayTotal[i][j] + sumaTotal;
-            }
+            total = sumaColumna(arrayTotal,i) + sumaFilaTotal(arrayTotal);
         }
-        System.out.print(" | " + " | ");
+        System.out.print(" | " + total + " | ");
     }
 
-    private static void sumaArrayColumnas(int[][] arrayTotal) {
+    private static int sumaArrayColumnas(int[][] arrayTotal) {
         int sumaColumnas = 0;
         int contadorColumnas = 0;
         int sumatotal = 0;
@@ -35,6 +34,7 @@ public class ejercicio2_entregable_19_20 {
             sumatotal = sumatotal+sumaColumna(arrayTotal,i);
             System.out.print(" | " + sumaColumna(arrayTotal,i) + " | ");
         }
+        return sumatotal;
     }
     static int sumaColumna (int [][] array , int i){
         int sumacolumna = 0;
@@ -42,6 +42,17 @@ public class ejercicio2_entregable_19_20 {
             sumacolumna = array[j][i] + sumacolumna;
         }
         return sumacolumna;
+    }
+
+    static int sumaFilaTotal (int [][] array){
+        int sumaFila = 0;
+        for (int i = 0; i < array.length; i++) {
+            sumaFila = 0;
+            for (int j = 0; j < array[i].length; j++) {
+                sumaFila = array[i][j] + sumaFila;
+            }
+        }
+        return sumaFila;
     }
 
     private static void sumaArrayFila(int[][] arrayTotal) {
