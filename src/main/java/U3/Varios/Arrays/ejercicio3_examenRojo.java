@@ -14,7 +14,7 @@ public class ejercicio3_examenRojo {
     }
 
     private static void calcularAlturas(int[][] arrayPaises) {
-        System.out.println("                                                                                                    MED MIN MAX");
+        System.out.println("                                                                                                    MED  MIN  MAX");
         for (int i = 0; i < arrayPaises.length; i++) {
             int contadorDerecha = 0;
            if (i == 0){
@@ -30,16 +30,29 @@ public class ejercicio3_examenRojo {
             for (int j = 0; j < arrayPaises[i].length; j++) {
                 System.out.print(" | " + arrayPaises[i][j] + " | ");
             }
-            System.out.print(sacarMedia(arrayPaises, i));
-            System.out.print(sacarMax(arrayPaises, i));
+            System.out.print(" "+sacarMedia(arrayPaises, i));
+            System.out.print("  "+sacarMin(arrayPaises, i));
+            System.out.print("  "+sacarMax(arrayPaises, i));
             System.out.println();
         }
     }
 
     private static int sacarMax(int[][] arrayPaises, int i) {
-        int numeroMin = 0;
-        for (int j = 0; j < arrayPaises.length; j++) {
+        int numeroMax = 0;
+        for (int j = 0; j < 10; j++) {
+            if (arrayPaises[i][j] > numeroMax){
+                numeroMax = arrayPaises[i][j];
+            }
+        }
+        return numeroMax;
+    }
 
+    private static int sacarMin(int[][] arrayPaises, int i) {
+        int numeroMin = 202;
+        for (int j = 0; j < 10; j++) {
+            if (arrayPaises[i][j] < numeroMin){
+                numeroMin = arrayPaises[i][j];
+            }
         }
         return numeroMin;
     }
