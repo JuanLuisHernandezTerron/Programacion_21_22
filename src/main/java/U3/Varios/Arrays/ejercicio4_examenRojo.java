@@ -60,7 +60,6 @@ public class ejercicio4_examenRojo {
     private static String[][] mezclasArrays(String[][] vector1, String[][] vector2) {
         int contadorIntroducido1 = 0;
         int contadorIntroducido2 = vector2.length;
-        boolean esta_completo = false;
         String[][] arrayAux = new String[vector1.length][vector1.length + vector2.length];
 
         for (int i = 0; i < vector1.length; i++) {
