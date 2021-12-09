@@ -23,11 +23,33 @@ import java.util.Arrays;
 public class ejercicio_mezclarArrays {
     public static void main(String[] args) {
         int []vector1 = {7,3,5,6,8};
-        int []vector2 = {9,6,};
-        unirArrays(vector1,vector2);
+        int []vector2 = {9,6,6,5,7};
+        System.out.println(Arrays.toString(unirArrays(vector1,vector2)));
+        System.out.println(Arrays.toString(quitarRepetidos(unirArrays(vector1,vector2))));
     }
 
-    private static void unirArrays(int[] vector1, int[] vector2) {
+    private static int[] quitarRepetidos(int[] unirArrays) {
+        int []arraySinrepetidos = new int[0];
+        int contadorArray = 0;
+        int contadorJ = 1;
+        for (int i = 0; i < unirArrays.length; i++) {
+            for (int j = contadorJ; j < unirArrays.length; j++) {
+                if (unirArrays[i] == unirArrays[contadorJ]){
+
+                }else{
+                    arraySinrepetidos = Arrays.copyOf(arraySinrepetidos,arraySinrepetidos.length+1);
+                    arraySinrepetidos[contadorArray] = unirArrays[i];
+                    contadorArray ++;
+                    break;
+                }
+            }
+            contadorJ ++;
+        }
+        return arraySinrepetidos;
+    }
+
+
+    private static int[] unirArrays(int[] vector1, int[] vector2) {
         int [] arrayAUX = new int[vector1.length+vector2.length];
         int indiceA = 0;
         int indiceB = 0;
@@ -50,6 +72,6 @@ public class ejercicio_mezclarArrays {
                 contadorIntroducidoAUX = 0;
             }
         }
-        System.out.println(Arrays.toString(arrayAUX));
+        return arrayAUX;
     }
 }

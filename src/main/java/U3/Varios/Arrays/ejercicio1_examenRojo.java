@@ -45,7 +45,6 @@ public class ejercicio1_examenRojo {
         int [] arrayUnir = new int[v1.length + v2.length];
         int indiceI = 0;
         int indiceJ = 0;
-        int numeroBasura = 0;
         int contadorIntroducido = 0;
         for (int i = 0; i < arrayUnir.length; i++) {
             for (int j = 0; j < arrayUnir.length; j++) {
@@ -68,15 +67,12 @@ public class ejercicio1_examenRojo {
 
     private static int[] seRepite(int[] arrayUnir) {
         int contadorMetido = 0;
-        int contadorRepetido = 0;
         int []arrayAux = new int[0];
         int indiceJ = 1;
-        int numeroBAsura = 0;
         for (int i = 0; i < arrayUnir.length; i++) {
             for (int j = indiceJ; j < arrayUnir.length; j++) {
                 if (arrayUnir[i] == arrayUnir[indiceJ]){
-                    contadorRepetido ++;
-                    numeroBAsura = numeroBAsura + arrayUnir[j];
+
                 }else{
                     arrayAux = Arrays.copyOf(arrayAux,arrayAux.length+1);
                     arrayAux[contadorMetido] = arrayUnir[i];

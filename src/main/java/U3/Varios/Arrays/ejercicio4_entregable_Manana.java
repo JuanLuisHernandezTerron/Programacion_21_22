@@ -7,7 +7,40 @@ public class ejercicio4_entregable_Manana {
     public static void main(String[] args) {
         int [][] arrayRelleno = new int [5][9];
         rellenarArray(arrayRelleno);
+        sacarMax(arrayRelleno);
+        sacarMin(arrayRelleno);
+    }
 
+    private static void sacarMin(int[][] arrayRelleno) {
+        int numeroMin = arrayRelleno[0][0];
+        int fila = 0;
+        int columna = 0;
+        for (int i = 0; i < arrayRelleno.length; i++) {
+            for (int j = 0; j < arrayRelleno[i].length; j++) {
+                if (arrayRelleno[i][j] < numeroMin){
+                    numeroMin = arrayRelleno[i][j];
+                    fila = i;
+                    columna = j;
+                }
+            }
+        }
+        System.out.println("El numero maximo es: " + numeroMin + " y su fila es: "+ fila + " y su columna es :" + columna);
+    }
+
+    private static void sacarMax(int[][] arrayRelleno) {
+        int numeroMax = arrayRelleno[0][0];
+        int fila = 0;
+        int columna = 0;
+        for (int i = 0; i < arrayRelleno.length; i++) {
+            for (int j = 0; j < arrayRelleno[i].length; j++) {
+                if (arrayRelleno[i][j] > numeroMax){
+                    numeroMax = arrayRelleno[i][j];
+                    fila = i;
+                    columna = j;
+                }
+            }
+        }
+        System.out.println("El numero maximo es: " + numeroMax + " y su fila es: "+ fila + " y su columna es : " + columna);
     }
 
     private static boolean es_Repetido(int [][]array, int numeroRepetido) {
