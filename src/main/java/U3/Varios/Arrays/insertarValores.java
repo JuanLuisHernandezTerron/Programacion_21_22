@@ -35,68 +35,30 @@ public class insertarValores {
         int [] v2 = {4,6,8,8};
 
         System.out.println(Arrays.toString(juntarArrays(v1,v2)));
-        System.out.println(Arrays.toString(noRepetidos(juntarArrays(v1,v2))));
+        quitarRepetidos(juntarArrays(v1,v2));
+
     }
 
-    private static int [] noRepetidos(int[] juntarArrays) {
-        int [] arraySinRepetir = new int[0];
-        int contadorIntroducido = 0;
-        int numeroNoRepetidointroducido = 0;
-        int numeroRepetido = 0;
-        boolean esRepetido = false;
-
+    private static int[] quitarRepetidos(int[] juntarArrays) {
+    int [] arraySinRepetir = new int[0];
         for (int i = 0; i < juntarArrays.length; i++) {
-            numeroRepetido = 0;
-            esRepetido= false;
             for (int j = 0; j < juntarArrays.length; j++) {
-                if (juntarArrays[i] == juntarArrays[j]){
-                    numeroRepetido++;
-                }
-                if(numeroRepetido > 1){
-                    esRepetido = true;
-                }
-                if (!esRepetido){
-                    if (numeroNoRepetidointroducido < 1) {
-                        arraySinRepetir = Arrays.copyOf(arraySinRepetir, arraySinRepetir.length + 1);
-                        arraySinRepetir[contadorIntroducido] = juntarArrays[i];
-                        contadorIntroducido++;
-                    }
-                    numeroNoRepetidointroducido ++;
-                }
+
             }
-            numeroNoRepetidointroducido = 0;
         }
-        return arraySinRepetir;
+    return arraySinRepetir;
     }
 
-    private static int [] juntarArrays(int[] v1, int[] v2) {
+    private static int[] juntarArrays(int[] v1, int[] v2) {
         int [] arrayAUX = new int[v1.length+ v2.length];
-        int contadorIntroducido = 0;
-        int contadorI = 0;
-        int contadorJ = 0;
+        int contadorArray = 0;
         for (int i = 0; i < v1.length; i++) {
-            for (int j = 0; j < v2.length; j++) {
-                if (contadorIntroducido != v1.length+ v2.length) {
-                    if (contadorI < v1.length && contadorJ < v2.length) {
-                        arrayAUX[contadorIntroducido] = v1[contadorI];
-                        contadorIntroducido++;
-                        contadorI++;
-                        /*-----------------------------------------------*/
-                        arrayAUX[contadorIntroducido] = v2[contadorJ];
-                        contadorIntroducido++;
-                        contadorJ++;
-                    } else if (contadorI < v1.length && contadorJ == v2.length) {
-                        arrayAUX[contadorIntroducido] = v1[contadorI];
-                        contadorIntroducido++;
-                        contadorI++;
-                    } else if (contadorJ < v2.length && contadorI == v1.length) {
-                        arrayAUX[contadorIntroducido] = v2[contadorJ];
-                        contadorIntroducido++;
-                        contadorJ++;
-                    }
-                }
-            }
+            arrayAUX[i] = v1[i];
+        }
+        for (int i = v1.length; i < v1.length+v2.length; i++) {
+            arrayAUX[i] = v2[contadorArray++];
         }
         return arrayAUX;
     }
+
 }
