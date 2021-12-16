@@ -24,14 +24,11 @@ public class ejercicio2_entregable_Tarde {
 
         System.out.println("Dime el numero que quieres pasar a morse: ");
         int numeroIntroducido = teclado.nextInt();
-        String numeroCadena = Integer.toString(numeroIntroducido);
         System.out.println(convierteEnMorse(numeroIntroducido));
     }
 
     private static String convierteEnMorse(int n) {
         String numero = Integer.toString(n);
-        int longitud = numero.length();
-        int contadorMorse = 0;
         String codigoTraducido = "";
         for (int i = 0; i < numero.length(); i++) {
             switch (numero.charAt(i)){
