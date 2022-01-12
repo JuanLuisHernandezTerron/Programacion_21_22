@@ -38,7 +38,7 @@ public class Ej4 {
             numeroAUX = numeroAUX /10;
                 if (resto > 0){
                     switch (resto){
-                        case 0 : numeroTraducido = numeroTraducido +"cero,";
+                        case 0: numeroTraducido = numeroTraducido +"cero,";
                         break;
                         case 1: numeroTraducido = numeroTraducido +"uno,";
                         break;
