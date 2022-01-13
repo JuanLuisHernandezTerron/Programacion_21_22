@@ -2,18 +2,31 @@ package U4.T1;
 
 public class cuentaCorriente {
 
-    //Atributos de la clase, se intentan que todos sean privados pero algunos pueden ser publicos
 
+    //Atributos de la clase, se intentan que todos sean privados pero algunos pueden ser publicos
+    private static String banco = "Cajasol";
     private long saldo = 0;
     private static int limite_descubrimiento = -50;
-    private String nombre;
-    private String DNI;
-    //CREA EL CONSTRUCTOR
+    public String nombre;
+    protected String DNI;
+    //CREA EL CONSTRUCTOR , PARA SOBRECARGAR UN CONSTRUCTOR SIMPLEMENTE CREAREMOS OTRA CUENTA CORRIENTE CON DIFERENTE ATRIBUTOS.
 
     public cuentaCorriente(String nombre, String DNI) {
         this.nombre = nombre;
         this.DNI = DNI;
     }
+    //ESTE CONSTRUCTOR TENDRÁ COMO DEFAULT EL LIMITE 0 Y EL SALDO QUE SE INTRODUZCA EN EL MAIN.
+    public cuentaCorriente(int saldo ) {
+        this.saldo = saldo;
+        this.limite_descubrimiento = 0;
+    }
+
+    public cuentaCorriente(int saldo , int limite_descubrimiento , String DNI) {
+        this.saldo = saldo;
+        this.limite_descubrimiento = limite_descubrimiento;
+        this.DNI = DNI;
+    }
+
     public boolean sacarDinero(long retirarDinero){
         boolean retirada = false;
         if (saldo - retirarDinero > this.limite_descubrimiento){
@@ -36,6 +49,10 @@ public class cuentaCorriente {
 
     public void mostrarInformacion(){
         System.out.println("Don/Doña " + getNombre() + " con DNI "+ getDNI() + " tiene en su cuenta un total de: " + getSaldo() + " € ");
+    }
+
+    public static void setBanco(String banco) {
+        cuentaCorriente.banco = banco;
     }
 
     private void setSaldo(long saldo) {
