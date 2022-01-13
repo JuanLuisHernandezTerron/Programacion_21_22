@@ -16,7 +16,23 @@ public class main {
         System.out.println(persona1.getSaldo());
         /*-------------------------------------------------------------------------------------------------*/
 
-        texto texto1 = new texto("Hola a todos",13,"asd");
-        texto1.introducirCaracter('a',3);
+        texto texto1 = new texto("Hola a todos que pasa nena",30);
+        texto1.introducirCaracter('a',"final"); //POSICION SE PODRÁ PONER EN PRINCIPIO O FINAL DEPENDIENDO DONDE QUIERAS MOSTRAR LA A.
+        System.out.println(texto1.sacarVocales());
+        texto1.insertarCadena("final","hi");
+
+        /*-------------------------------------------------------------------------------------------------*/
+
+        banco banco1 = new banco("Cajasol",120000,"C/Jose Perez");
+        cuentaCorriente.setBanco(banco1);
+        /*-------------------------------------------------------------------------------------------------*/
+        emisoraFM fr1 = new emisoraFM();
+        fr1.subirMHz();
+        fr1.bajarMHz();
+        fr1.bajarMHz();
+        /*------------------------------------------------------------------------------------------------*/
+
+        bombilla bomb1 = new bombilla(true);
+        System.out.println(bomb1.isEstado());
     }
 }

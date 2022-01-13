@@ -2,13 +2,12 @@ package U4.T1;
 
 public class cuentaCorriente {
 
-
     //Atributos de la clase, se intentan que todos sean privados pero algunos pueden ser publicos
-    private static String banco = "Cajasol";
+    private static banco nombre_banco;
     private long saldo = 0;
-    private static int limite_descubrimiento = -50;
+    private int limite_descubrimiento = -50;
     public String nombre;
-    protected String DNI;
+    private String DNI;
     //CREA EL CONSTRUCTOR , PARA SOBRECARGAR UN CONSTRUCTOR SIMPLEMENTE CREAREMOS OTRA CUENTA CORRIENTE CON DIFERENTE ATRIBUTOS.
 
     public cuentaCorriente(String nombre, String DNI) {
@@ -51,8 +50,12 @@ public class cuentaCorriente {
         System.out.println("Don/Doña " + getNombre() + " con DNI "+ getDNI() + " tiene en su cuenta un total de: " + getSaldo() + " € ");
     }
 
-    public static void setBanco(String banco) {
-        cuentaCorriente.banco = banco;
+    public static void setBanco(banco banco1) {
+        cuentaCorriente.nombre_banco = banco1;
+    }
+
+    public static banco getNombre_banco() {
+        return nombre_banco;
     }
 
     private void setSaldo(long saldo) {
