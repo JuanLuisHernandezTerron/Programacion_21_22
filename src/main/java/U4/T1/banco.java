@@ -10,9 +10,11 @@ public class banco {
         this.capital = capital;
         this.direccionCentral = direccionCentral;
     }
+
     public void setDireccionCentral(String direccionCentral) {
         this.direccionCentral = direccionCentral;
     }
+
     public void setCapital(long capital) {
         this.capital = capital;
     }
