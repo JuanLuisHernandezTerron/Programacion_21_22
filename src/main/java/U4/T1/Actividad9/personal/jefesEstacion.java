@@ -8,4 +8,19 @@ public class jefesEstacion {
         this.nombreCompleto = nombreCompleto;
         this.dni = dni;
     }
+    public String getNombreCompleto() {
+        return nombreCompleto;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
 }

@@ -14,7 +14,9 @@ public class mainHora {
 
         hora hora1 = new hora(hora,segundos);
 
-        hora1.setSegundo(25);
+        System.out.println("La hora sin minutos es:"+hora+":"+segundos+"(segundos)");
+        hora1.setSegundo(220);
         hora1.anadirSegundos();
+        hora1.getInformacion();
     }
 }

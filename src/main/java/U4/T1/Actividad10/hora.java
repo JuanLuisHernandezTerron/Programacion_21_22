@@ -12,15 +12,21 @@ public class hora {
 
     public void anadirSegundos(){
         int contadorMinutos = 0;
-        if (segundo > 0 && segundo < 60){
+        int contadorMinutosHoras = 0;
 
-        }else {
-            while (segundo > 0) {
-                segundo = segundo - 60;
-                contadorMinutos++;
-            }
+        while (segundo + this.segundo >=60 || minuto >=60){
+            segundo -=60;
+            contadorMinutos ++;
+            minuto = contadorMinutos;
+                if (minuto > 60){
+                    contadorMinutosHoras++;
+                    minuto -=60;
+                    hora +=contadorMinutosHoras;
+                }else if(minuto == 60){
+                    hora +=1;
+                    minuto -=60;
+                }
         }
-        System.out.println(hora+":"+minuto+":"+segundo);
     }
 
     public void setHora(int hora) {
@@ -28,9 +34,12 @@ public class hora {
     }
 
     public void setSegundo(int segundo) {
-        this.segundo = segundo;
+        this.segundo = this.segundo+segundo;
     }
 
+    public void getInformacion(){
+        System.out.println("La hora nueva es"+hora+":"+minuto+":"+segundo);
+    }
 
     public int getHora() {
         return hora;

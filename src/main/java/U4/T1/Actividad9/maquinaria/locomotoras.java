@@ -1,5 +1,6 @@
 package U4.T1.Actividad9.maquinaria;
 import U4.T1.Actividad9.personal.mecanicos;
+
 public class locomotoras {
     private String matricula;
     private int potenciaMotor;
@@ -13,7 +14,7 @@ public class locomotoras {
         this.mecanico = meca1;
     }
 
-    /*getters*/
+
 
     public String getMatricula() {
         return matricula;
@@ -30,7 +31,7 @@ public class locomotoras {
         return mecanico;
     }
 
-    /*setters*/
+
 
     public void setMatricula(String matricula) {
         this.matricula = matricula;
