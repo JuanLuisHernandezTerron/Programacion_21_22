@@ -5,27 +5,34 @@ public class hora {
     private int minuto;
     private int segundo;
 
-    public hora(int hora, int segundo){
+    public hora(int hora, int minuto, int segundo){
         this.hora = hora;
         this.segundo = segundo;
+        this.minuto = minuto;
     }
-
-    public void anadirSegundos(){
-        int contadorMinutos = 0;
+    public void anadirSegundos(int segundo){
+        setSegundo(this.segundo+segundo);
         int contadorMinutosHoras = 0;
 
-        while (segundo + this.segundo >=60 || minuto >=60){
-            segundo -=60;
-            contadorMinutos ++;
-            minuto = contadorMinutos;
-                if (minuto > 60){
-                    contadorMinutosHoras++;
-                    minuto -=60;
-                    hora +=contadorMinutosHoras;
-                }else if(minuto == 60){
-                    hora +=1;
-                    minuto -=60;
+        while (this.segundo >=60){
+            this.segundo -=60;
+            setMinuto(this.minuto+1);
+        }
+
+        while (minuto >=60){
+            if (minuto ==60){
+                setHora(this.hora+1);
+                setMinuto(0);
+                setSegundo(0);
+            }else{
+                minuto -=60;
+                contadorMinutosHoras++;
+                if (contadorMinutosHoras ==60){
+                    hora+=1;
+                    minuto=0;
+                    segundo=0;
                 }
+            }
         }
     }
 
@@ -34,7 +41,11 @@ public class hora {
     }
 
     public void setSegundo(int segundo) {
-        this.segundo = this.segundo+segundo;
+        this.segundo =segundo;
+    }
+
+    public void setMinuto(int minuto) {
+        this.minuto = minuto;
     }
 
     public void getInformacion(){
@@ -43,6 +54,10 @@ public class hora {
 
     public int getHora() {
         return hora;
+    }
+
+    public int getMinuto() {
+        return minuto;
     }
 
     public int getSegundo() {
