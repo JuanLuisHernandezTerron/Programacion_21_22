@@ -15,6 +15,11 @@ public class mainHora {
         System.out.print("Dime los segundos:");
         int segundos = teclado.nextInt();
 
+        if (hora >24){
+            hora=0;
+        }else if(minutos <60){
+            minutos = 0;
+        }
         hora hora1 = new hora(hora,minutos,segundos);
 
         System.out.println("La hora sin minutos es: "+hora+":"+minutos+":"+segundos);
