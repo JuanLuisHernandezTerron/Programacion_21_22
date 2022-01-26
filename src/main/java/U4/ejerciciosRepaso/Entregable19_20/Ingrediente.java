@@ -1,24 +1,15 @@
 package U4.ejerciciosRepaso.Entregable19_20;
 
-public class Ingredientes {
+public class Ingrediente {
     private String ingrediente;
-
-    public int getCalorias() {
-        return calorias;
-    }
-
-    public void setCalorias(int calorias) {
-        this.calorias = calorias;
-    }
-
     private int calorias;
 
-    public Ingredientes(String ingrediente, int calorias){
+    public Ingrediente(String ingrediente, int calorias){
         this.ingrediente = ingrediente;
         this.calorias = calorias;
     }
 
-    public Ingredientes(){
+    public Ingrediente(){
         this.ingrediente = "Queso";
         this.calorias = 250;
     }
@@ -27,7 +18,19 @@ public class Ingredientes {
         return ingrediente;
     }
 
+    public void ingredientesArray(){
+        System.out.println("El ingrediente es "+ingrediente);
+    }
+
     public void setIngrediente(String ingrediente) {
         this.ingrediente = ingrediente;
+    }
+
+    public int getCalorias() {
+        return calorias;
+    }
+
+    public void setCalorias(int calorias) {
+        this.calorias = calorias;
     }
 }

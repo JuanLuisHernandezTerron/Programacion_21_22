@@ -1,8 +1,8 @@
 package U4.T1.Actividad9;
 import U4.T1.Actividad9.maquinaria.locomotoras;
+import U4.T1.Actividad9.personal.maquinista;
 import U4.T1.Actividad9.maquinaria.trenes;
 import U4.T1.Actividad9.personal.mecanicos;
-import U4.T1.Actividad9.personal.maquinista;
 
 public class mainCentral {
     public static void main(String[] args) {
@@ -16,7 +16,6 @@ public class mainCentral {
     tren1.crearVagon(700,480,"CHATARRA");
     tren1.crearVagon(550,520,"GRANOSMAIZ");
     tren1.crearVagon(550,520,"GRANOSMAIZ");
-
 
     tren1.getArrayVagon();
 

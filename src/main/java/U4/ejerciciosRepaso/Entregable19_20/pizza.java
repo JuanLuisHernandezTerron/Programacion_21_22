@@ -1,10 +1,14 @@
 package U4.ejerciciosRepaso.Entregable19_20;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class pizza {
     private tamanoPizza tamano;
-
     private int contadorIngrediente = 0;
 
-    private Ingredientes [] ingredientesArray = new Ingredientes[3];
+    private Ingrediente[] ingredientesArray = new Ingrediente[0];
+
     public pizza(tamanoPizza pizza){
         this.tamano = pizza;
     }
@@ -20,16 +24,14 @@ public class pizza {
     public static enum tamanoPizza{
         MEDIANA,
         FAMILIAR;
-    }
-    public void crearIngredientes(String ingrediente , int calorias){
-        Ingredientes ingrediente1 = new Ingredientes(ingrediente,calorias);
-        anadirIngredientes(ingrediente1);
+
     }
 
-    public boolean anadirIngredientes(Ingredientes ingrediente){
+    public boolean anadirIngredientes(Ingrediente ingrediente){
+        ingredientesArray = Arrays.copyOf(ingredientesArray,ingredientesArray.length+1);
         ingredientesArray[contadorIngrediente++] = ingrediente;
         boolean pizzaLlena = false;
-        if (ingredientesArray.length == 3){
+        if (ingredientesArray.length < 3){
             pizzaLlena = true;
         }
         return pizzaLlena;
@@ -40,8 +42,11 @@ public class pizza {
     }
 
     public void getInformacionPizza(){
+        System.out.println("La pizza tiene "+getContadorIngrediente()+" ingredientes");
         System.out.println("El tamaño de la pizza es: "+getTamano());
-        System.out.println("Tiene"+getContadorIngrediente()+" ingredientes la pizza");
+        for (int i = 0; i < ingredientesArray.length; i++) {
+            ingredientesArray[i].ingredientesArray();
+        }
     }
 
     public tamanoPizza getTamano() {
@@ -50,5 +55,9 @@ public class pizza {
 
     public void setTamano(tamanoPizza tamano) {
         this.tamano = tamano;
+    }
+
+    public Ingrediente[] getIngredientesArray() {
+        return ingredientesArray;
     }
 }
