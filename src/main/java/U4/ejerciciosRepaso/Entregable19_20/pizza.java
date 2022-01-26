@@ -4,7 +4,7 @@ public class pizza {
 
     private int contadorIngrediente = 0;
 
-    private String [] ingredientesArray = new String[3];
+    private Ingredientes [] ingredientesArray = new Ingredientes[3];
     public pizza(tamanoPizza pizza){
         this.tamano = pizza;
     }
@@ -21,7 +21,12 @@ public class pizza {
         MEDIANA,
         FAMILIAR;
     }
-    public boolean anadirIngredientes(String ingrediente , int calorias){
+    public void crearIngredientes(String ingrediente , int calorias){
+        Ingredientes ingrediente1 = new Ingredientes(ingrediente,calorias);
+        anadirIngredientes(ingrediente1);
+    }
+
+    public boolean anadirIngredientes(Ingredientes ingrediente){
         ingredientesArray[contadorIngrediente++] = ingrediente;
         boolean pizzaLlena = false;
         if (ingredientesArray.length == 3){

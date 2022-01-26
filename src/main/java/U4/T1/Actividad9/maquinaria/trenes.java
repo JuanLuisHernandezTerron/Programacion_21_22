@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class trenes {
     private locomotoras locomotora;
-    private maquinista pilotoLocomotora;
+    private  maquinista pilotoLocomotora;
 
     vagones [] arrayVagon = new vagones[0];
 
