@@ -4,8 +4,8 @@ public class personaje {
     private tipopersonaje nombrePersonaje;
     private double velocidad;
     private int puntosPunetazo;
-
     private int puntosPatada;
+
     public personaje(tipopersonaje nombrePersonaje, double velocidad, int puntosPunetazo, int puntosPatada){
         this.nombrePersonaje = nombrePersonaje;
         this.velocidad = velocidad;
@@ -32,10 +32,6 @@ public class personaje {
         SONIC,
         TAILS,
         KNUCKLES
-    }
-
-    public void hacerDanoPatada(){
-
     }
 
     public void setPuntosPatada(int puntosPatada) {

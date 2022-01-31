@@ -10,9 +10,7 @@ public class escenario {
     private int contadorEnemigos =0;
 
     private enemigo.tipoEnemigo [] arrayTiposEnemigos = new enemigo.tipoEnemigo[5];
-
     private enemigo [] arrayEnemigo = new enemigo[0];
-
     public escenario(enemigo.tipoEnemigo[] arrayTipo){
         this.arrayTiposEnemigos = arrayTipo;
         this.altura=100;
@@ -31,7 +29,6 @@ public class escenario {
             arrayEnemigo[contadorEnemigos++] = enemigoAUX;
         }
     }
-
     public void eliminarEnemigos(int posicionEliminar){ //Este metodo sirve para avanzar las casillas a la izquierda y eliminar la ultima
         for (int i = 0; i < arrayEnemigo.length-1; i++) {
             if ( i >= posicionEliminar){
@@ -39,6 +36,14 @@ public class escenario {
             }
         }
         arrayEnemigo = Arrays.copyOf(arrayEnemigo,arrayEnemigo.length-1);
+    }
+
+    public void getInformacionEscenario(){
+        System.out.println("La altura del escenario es:"+getAltura());
+        System.out.println("La longintud del escenario es: "+getLongitud());
+        System.out.println("El escenario tiene "+getNumeroAnillos()+" anillos");
+        System.out.println("El escenario tiene " + arrayTiposEnemigos.length + " de tipos de enemigos");
+        getArrayInfoEnemigo();
     }
 
     public void getArrayTiposEnemigos() {
@@ -52,4 +57,45 @@ public class escenario {
             System.out.println(arrayEnemigo[i].getEnemigoNombre());
         }
     }
+
+    public int getContadorEnemigos() {
+        return contadorEnemigos;
+    }
+
+    public void setContadorEnemigos(int contadorEnemigos) {
+        this.contadorEnemigos = contadorEnemigos;
+    }
+
+    public int getAltura() {
+        return altura;
+    }
+
+    public void setAltura(int altura) {
+        this.altura = altura;
+    }
+
+    public int getLongitud() {
+        return longitud;
+    }
+
+    public void setLongitud(int longitud) {
+        this.longitud = longitud;
+    }
+
+    public int getNumeroAnillos() {
+        return numeroAnillos;
+    }
+
+    public void setNumeroAnillos(int numeroAnillos) {
+        this.numeroAnillos = numeroAnillos;
+    }
+
+    public int getGemas() {
+        return gemas;
+    }
+
+    public void setGemas(int gemas) {
+        this.gemas = gemas;
+    }
+
 }
