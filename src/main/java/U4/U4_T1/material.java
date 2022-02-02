@@ -16,7 +16,7 @@ public class material {
             this.unidadesNecesarias = 1;
         }
 
-        if (precioUnidad >= 0 && precioUnidad <= 1000){
+        if (precioUnidad >= 0 && precioUnidad <= 100000){
             this.precioUnidad = precioUnidad;
         }else{
             this.precioUnidad = 0;
