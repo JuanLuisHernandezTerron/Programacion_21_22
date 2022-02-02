@@ -33,7 +33,7 @@ public class vivienda {
 
     public void eliminarEstancias(int posicionEstancia){
         for (int i = 0; i < arrayEstancias.length-1; i++) {
-            if (i == posicionEstancia){
+            if (i >= posicionEstancia){
                 arrayEstancias[i] = arrayEstancias[i+1];
             }
         }
