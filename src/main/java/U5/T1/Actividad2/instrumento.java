@@ -1,19 +1,17 @@
 package U5.T1.Actividad2;
-
 import java.util.Arrays;
-
-public class instrumento {
-    private notas notasAUX;
-    private notas [] arrayNotas = new notas[0];
-    private int contadorNotas;
-
+public abstract class instrumento {
+    private notas [] arrayNotas;
     public instrumento(){
+        this.arrayNotas = new notas[100];
     }
 
-    public void add(notas notasAUX){
-        arrayNotas = Arrays.copyOf(arrayNotas,arrayNotas.length+1);
-        arrayNotas[contadorNotas++] = notasAUX;
-    }
+    public abstract void add(notas notasAUX);
+
+    public abstract void interpretar();
+
+
+
     public enum notas{
         DO,
         RE,
@@ -21,8 +19,14 @@ public class instrumento {
         FA,
         SO,
         LA,
-        SI
+        SI;
     }
 
+    public notas[] getArrayNotas() {
+        return arrayNotas;
+    }
 
+    public void setArrayNotas(notas[] arrayNotas) {
+        this.arrayNotas = arrayNotas;
+    }
 }
