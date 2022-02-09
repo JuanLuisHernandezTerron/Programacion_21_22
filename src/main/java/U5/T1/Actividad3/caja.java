@@ -1,9 +1,9 @@
 package U5.T1.Actividad3;
 
 public class caja {
-    private double ancho;
-    private double alto;
-    private double fondo;
+    protected double ancho;
+    protected double alto;
+    protected double fondo;
     private unidad unidades;
 
     private String etiqueta;
