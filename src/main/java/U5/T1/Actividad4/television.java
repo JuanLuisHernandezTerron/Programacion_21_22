@@ -36,10 +36,10 @@ public class television extends electrodomestico{
                 ", colorElec=" + colorElec +
                 ", consumo=" + consumo +
                 ", peso=" + peso +
-                ",precio final es"+ getPrecioFinalTV()+
+                ", precio final es: "+ getPrecioFinalTV()+
                 '}';
     }
-    
+
     public int getPulgadas() {
         return pulgadas;
     }

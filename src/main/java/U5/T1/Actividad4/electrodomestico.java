@@ -89,7 +89,7 @@ public class electrodomestico {
                 ", colorElec=" + colorElec +
                 ", consumo=" + consumo +
                 ", peso=" + peso +
-                ",precio final es"+ getPrecioFinal()+
+                ", precio final es"+ getPrecioFinal()+
                 '}';
     }
 }
