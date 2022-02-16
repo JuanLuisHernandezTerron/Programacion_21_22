@@ -9,18 +9,12 @@ public class cliente {
     private int edad;
     private double saldo;
 
-    cliente [] arrayClientes = new cliente[5];
-
     int contadorClientes = 0;
     public cliente(String dni, String nombre, int edad, double saldo) {
         this.dni = dni;
         this.nombre = nombre;
         this.edad = edad;
         this.saldo = saldo;
-    }
-
-    public void meterClientes (cliente clienteAUX){
-        arrayClientes[contadorClientes++] = clienteAUX;
     }
 
     @Override
@@ -47,10 +41,6 @@ public class cliente {
 
     public void setDni(String dni) {
         this.dni = dni;
-    }
-
-    public cliente[] getArrayClientes() {
-        return arrayClientes;
     }
 
     public String getNombre() {

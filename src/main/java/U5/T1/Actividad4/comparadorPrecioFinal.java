@@ -1,5 +1,7 @@
 package U5.T1.Actividad4;
 
+import U5.T1.Actividad4.lavadora;
+
 import java.util.Comparator;
 
 public class comparadorPrecioFinal implements Comparator {
