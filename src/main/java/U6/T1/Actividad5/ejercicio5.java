@@ -17,18 +17,18 @@ public class ejercicio5 {
 
         try{
             BufferedReader b1 = new BufferedReader(new FileReader("/home/juanlu/Escritorio/Programacion_21_22/src/main/java/U6/T1/Actividad5/"+nombreFichero));
-            int c = Integer.parseInt(b1.readLine());
-            while (c != -1){
-                c= Integer.parseInt(b1.readLine());
-                numeroAUX = (Integer) c;
-                if (contadorAUX != 1){
-                    numeroMayor = c;
-                    numeroMenor = c;
-                    contadorAUX++;
-                }else if(c > numeroMayor){
-                    numeroMayor =c;
-                }else if(c < numeroMenor){
-                    numeroMenor = c;
+            String c = b1.readLine();
+            numeroMenor = Integer.parseInt(c);
+            numeroMayor = Integer.parseInt(c);
+            c = b1.readLine();
+
+            while (c != null){
+                numeroAUX = Integer.parseInt(c);
+                c = b1.readLine();
+                if(numeroAUX > numeroMayor){
+                    numeroMayor = numeroAUX;
+                }else if(numeroAUX < numeroMenor){
+                    numeroMenor = numeroAUX;
                 }
             }
             b1.close();
