@@ -31,11 +31,13 @@ public class ejercicio4 {
                          contadorPalabras ++;
                      }else if(recorrerTexto.equals(" ")||recorrerTexto.equalsIgnoreCase(recorrerabe)){
                          contadorCaracteres ++;
+                     }else if(recorrerTexto.equals("/n")){
+                         contadorFilas++;
                      }
                  }
              }
 
-             System.out.println("Tiene "+contadorPalabras+" palabras"+ " y "+ contadorCaracteres + " caracteres");
+             System.out.println("Tiene "+contadorPalabras+" palabras"+ " y "+ contadorCaracteres + " caracteres"+"Tiene también"+contadorFilas+" filas");
          }catch (IOException ex){
              System.out.println("ERROR DE FICHEROS");
          }
