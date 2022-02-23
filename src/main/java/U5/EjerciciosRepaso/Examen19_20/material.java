@@ -1,6 +1,6 @@
 package U5.EjerciciosRepaso.Examen19_20;
 
-public abstract class material {
+public abstract class material implements Comparable{
     private String nombre;
     private int masa;
     private int quemarse;
@@ -47,4 +47,33 @@ public abstract class material {
         return nombre;
     }
 
+    @Override
+    public String toString() {
+        return "material{" +
+                "nombre='" + nombre + '\'' +
+                ", masa=" + masa +
+                ", quemarse=" + quemarse +
+                ", diluirse=" + diluirse +
+                ", movibles=" + movibles +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        material t1 = (material) o;
+        if (t1.getMasa() > this.masa){
+            return -1;
+        }else if(t1.masa < this.masa){
+            return 1;
+        }
+        return 0;
+    }
+
+    public int getQuemarse() {
+        return quemarse;
+    }
+
+    public int getDiluirse() {
+        return diluirse;
+    }
 }

@@ -1,6 +1,6 @@
 package U5.EjerciciosRepaso.Examen19_20;
 
-public class Rocas extends material{
+public class Rocas extends material implements Mezclar{
     private int dureza;
 
     public Rocas(String nombre, int masa, int quemarse, int diluirse, boolean movibles, int dureza){
@@ -16,4 +16,8 @@ public class Rocas extends material{
         }
     }
 
+    @Override
+    public void MezclarConMaterial(material materialAUX) {
+        System.out.println("La mezcla quedaría, roca con "+materialAUX.getNombre());
+    }
 }
