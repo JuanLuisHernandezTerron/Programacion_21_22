@@ -15,11 +15,12 @@ public class main {
         camion1.introducirCaja(caja2);
         camion1.introducirCaja(caja3);
 
-        camion1.eliminarCaja(caja2);
-
         caja1.introducirPrendaCaja(prenda1);
         caja1.introducirPrendaCaja(prenda2);
         caja1.introducirPrendaCaja(prenda3);
+
+        camion1.eliminarCaja(caja2);
+        System.out.println(camion1);
 
     }
 }

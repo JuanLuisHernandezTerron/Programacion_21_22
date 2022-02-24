@@ -1,6 +1,6 @@
 package U5.EjerciciosRepaso.Examen2021Manana;
 
-public class prenda {
+public class prenda implements comportamientoEmpresa{
     private double precio;
     private String nombrePrenda;
     private int codigoBarras;
@@ -14,15 +14,42 @@ public class prenda {
         this.codigoBarras = codigoBarras;
         this.peso = peso;
         contadorPrenda++;
+
     }
 
-    public prenda(double precio, String nombrePrenda, int codigoBarras, int peso, int altura) {
-        this.precio = precio;
-        this.nombrePrenda = nombrePrenda;
-        this.codigoBarras = codigoBarras;
-        this.peso = peso;
-        this.altura = altura;
-        contadorPrenda++;
+    public static void setContadorPrenda(int contadorPrenda) {
+        prenda.contadorPrenda = contadorPrenda;
+    }
+
+    public static int getContadorPrenda() {
+        return contadorPrenda;
+    }
+
+    public int getPeso() {
+        return peso;
+    }
+
+    @Override
+    public void devolver(prenda prendaAUX) {
+        System.out.println("Devolviendo la prenda "+prendaAUX.nombrePrenda+" y el precio "+prendaAUX.getPrecio());
+    }
+
+    @Override
+    public void doblar(prenda prendaAUX) {
+        System.out.println("Se está doblando");
+    }
+
+    @Override
+    public void colgar() {
+        System.out.println("Se esta colgando");
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public String getNombrePrenda() {
+        return nombrePrenda;
     }
 
 }
