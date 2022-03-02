@@ -1,8 +1,6 @@
 package U6.T2.Actividad4;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.Scanner;
 
 public class ejercicio4 {
@@ -18,9 +16,10 @@ public class ejercicio4 {
             arrrayNumeros[i]=numeroDouble;
         }
         try {
-            ObjectOutputStream fichero = new ObjectOutputStream(new FileOutputStream("C:\\Users\\juanlu\\Desktop\\Programacion_21_22\\src\\main\\java\\U6\\T2\\Actividad4\\arrayNumerosGuardar.dat"));
-            fichero.writeObject(arrrayNumeros); //Así se escribe los arrays en binario.
-            fichero.close();
+//          ObjectOutputStream fichero = new ObjectOutputStream(new FileOutputStream("C:\\Users\\juanlu\\Desktop\\Programacion_21_22\\src\\main\\java\\U6\\T2\\Actividad4\\arrayNumerosGuardar.dat"));
+            ObjectOutputStream fichero1 = new ObjectOutputStream(new FileOutputStream("/home/juanlu/Escritorio/Programacion_21_22/src/main/java/U6/T2/Actividad4/arrayNumerosGuardar.dat"));
+            fichero1.writeObject(arrrayNumeros); //Así se escribe los arrays en binario.
+            fichero1.close();
         }catch (IOException ex){
             ex.printStackTrace();
         }

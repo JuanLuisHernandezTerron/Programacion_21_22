@@ -1,6 +1,8 @@
 package U4.T1.Actividad9.personal;
 
-public class maquinista {
+import java.io.Serializable;
+
+public class maquinista implements Serializable {
     private String nombreCompleto;
     private String dni;
     private int sueldo;
@@ -43,5 +45,15 @@ public class maquinista {
 
     public void setRango(String rango) {
         this.rango = rango;
+    }
+
+    @Override
+    public String toString() {
+        return "maquinista{" +
+                "nombreCompleto='" + nombreCompleto + '\'' +
+                ", dni='" + dni + '\'' +
+                ", sueldo=" + sueldo +
+                ", rango='" + rango + '\'' +
+                '}';
     }
 }

@@ -1,6 +1,8 @@
 package U4.T1.Actividad9.personal;
 
-public class mecanicos {
+import java.io.Serializable;
+
+public class mecanicos implements Serializable {
     private String nombreCompleto;
     private int telefono;
     private tipoEspecialidad especialidad;

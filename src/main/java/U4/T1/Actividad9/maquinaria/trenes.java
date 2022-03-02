@@ -1,10 +1,10 @@
 package U4.T1.Actividad9.maquinaria;
-import U4.T1.Actividad9.maquinaria.locomotoras;
 import U4.T1.Actividad9.personal.maquinista;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class trenes {
+public class trenes implements Serializable {
     private locomotoras locomotora;
     private  maquinista pilotoLocomotora;
 
@@ -32,6 +32,14 @@ public class trenes {
         for (int i = 0; i < arrayVagon.length; i++) {
             arrayVagon[i].informacionVagoness();
         }
+    }
+
+    @Override
+    public String toString() {
+        return "trenes{" +
+                "locomotora=" + locomotora.toString() +
+                ", pilotoLocomotora=" + pilotoLocomotora.toString() +
+                '}';
     }
 
     public locomotoras getLocomotora() {

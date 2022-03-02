@@ -1,7 +1,9 @@
 package U4.T1.Actividad9.maquinaria;
 import U4.T1.Actividad9.personal.mecanicos;
 
-public class locomotoras {
+import java.io.Serializable;
+
+public class locomotoras implements Serializable {
     private String matricula;
     private int potenciaMotor;
     private int anoFabricacion;
@@ -46,5 +48,15 @@ public class locomotoras {
 
     public void setMecanico(mecanicos mecanico) {
         this.mecanico = mecanico;
+    }
+
+    @Override
+    public String toString() {
+        return "locomotoras{" +
+                "matricula='" + matricula + '\'' +
+                ", potenciaMotor=" + potenciaMotor +
+                ", anoFabricacion=" + anoFabricacion +
+                ", mecanico=" + mecanico +
+                '}';
     }
 }
