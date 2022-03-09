@@ -34,12 +34,18 @@ public class ejercicio4 {
     }
 
     private static void palabrasNoRepetidas(ArrayList<String> arrayFrase) {
-        int contadorLetrasJ =1;
+        int contadorLetrasJ =0;
         int i =0;
         int j=0;
         for (int k = 0; k < arrayFrase.size(); k++) {
-            if (!arrayFrase.get(i++).equalsIgnoreCase(arrayFrase.get(j++))){
-                System.out.println(arrayFrase.get(i));
+            contadorLetrasJ=0;
+            for (int l = 0; l < arrayFrase.size(); l++) {
+                if (arrayFrase.get(k).equalsIgnoreCase(arrayFrase.get(l))){
+                    contadorLetrasJ++;
+                }
+            }
+            if (contadorLetrasJ == 1){
+                System.out.println(arrayFrase.get(k));
             }
         }
     }

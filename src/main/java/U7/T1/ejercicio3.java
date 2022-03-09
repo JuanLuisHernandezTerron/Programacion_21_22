@@ -43,7 +43,7 @@ public class ejercicio3 {
 
     public static void mostrarArray(ArrayList<Integer> arrayNumeros){
         for ( Integer mostrarArray: arrayNumeros){
-            System.out.print(mostrarArray+" ,");
+            System.out.print(mostrarArray+" ");
         }
     }
 }
