@@ -15,6 +15,7 @@ public class ejercicio4 {
         String frase= teclado.nextLine();
         ArrayList<String> arrayFrase = new ArrayList<>();
         String fraseAUX = "";
+        boolean es_Repetido= false;
         for (int i = 0; i < frase.length(); i++) {
             Iterator <String> it = arrayFrase.iterator();
             String recorerFrase= String.valueOf(frase.charAt(i));
@@ -25,5 +26,48 @@ public class ejercicio4 {
                 fraseAUX+=recorerFrase;
             }
         }
+        arrayFrase.add(fraseAUX);
+        System.out.println("Palabras repetidas: ");
+        palabrasRepetidas(arrayFrase);
+        System.out.println("Palabras no repetidas: ");
+        palabrasNoRepetidas(arrayFrase);
+    }
+
+    private static void palabrasNoRepetidas(ArrayList<String> arrayFrase) {
+        int contadorLetrasJ =1;
+        int i =0;
+        int j=0;
+        for (int k = 0; k < arrayFrase.size(); k++) {
+            if (!arrayFrase.get(i++).equalsIgnoreCase(arrayFrase.get(j++))){
+                System.out.println(arrayFrase.get(i));
+            }
+        }
+    }
+
+    private static void palabrasRepetidas(ArrayList<String> arrayFrase) {
+        int contadorLetrasJ =1;
+        for (int i = 0; i < arrayFrase.size(); i++) {
+            for (int j = contadorLetrasJ; j < arrayFrase.size(); j++) {
+                if (arrayFrase.get(i).equalsIgnoreCase(arrayFrase.get(j))){
+                    if (comprobarRepetido(arrayFrase.get(i))){
+                        System.out.println(arrayFrase.get(i));
+                    }
+                }
+            }
+            contadorLetrasJ++;
+        }
+    }
+
+    private static boolean comprobarRepetido(String s) {
+        boolean es_repetido = false;
+        ArrayList<String> arrayAUX = new ArrayList<>();
+        arrayAUX.add(s);
+        for (String aux : arrayAUX) {
+            es_repetido = false;
+            if (s.equalsIgnoreCase(aux)) {
+                es_repetido = true;
+            }
+        }
+        return es_repetido;
     }
 }
