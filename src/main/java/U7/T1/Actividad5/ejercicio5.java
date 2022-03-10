@@ -2,36 +2,38 @@ package U7.T1.Actividad5;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 
 /*Crear una colección de 20 números enteros aleatorios distintos menores que 100, guardarlos por
 orden decreciente a medida que se vayan generando, y mostrar la colección por pantalla.*/
 public class ejercicio5{
     public static void main(String[] args) {
         ArrayList<Integer> arrayInt = new ArrayList<>();
-        int numeroRandom = (int) (1 + Math.random() * 100);
-        arrayInt.add(numeroRandom);
-        int contador = 0;
         for (int i = 0; i < 20; i++) {
-            numeroRandom = (int) (1 + Math.random() * 100);
+           int numeroRandom = (int) (1 + Math.random() * 100);
+           while (numeroRepetido(arrayInt,numeroRandom)){
+               numeroRandom = (int) (1 + Math.random() * 100);
+           }
+           int indice = 0;
             for (int j = 0; j < arrayInt.size(); j++) {
-                if (arrayInt.get(i).equals(arrayInt.get(j))){
-                    arrayInt.add(numeroRandom);
-                    contador++;
-                    if (contador == 1){
-                        while (numeroRandom < arrayInt.get(i)){
-                            Collections.sort(arrayInt,new ordenarArrayDesc());
-                            numeroRandom = (int) (1 + Math.random() * 100);
-                            arrayInt.set(i,numeroRandom);
-                        }
-                    }
+                if (arrayInt.get(j) > numeroRandom) {
+                    indice++;
                 }
             }
-            Collections.sort(arrayInt,new ordenarArrayDesc());
-            contador =0;
+            arrayInt.add(indice,numeroRandom);
         }
         mostrarArray(arrayInt);
         }
+
+    private static boolean numeroRepetido(ArrayList<Integer> arrayInt, int numero) {
+        boolean es_repetido = false;
+        for (int i = 0; i < arrayInt.size(); i++) {
+            if (arrayInt.get(i) == numero){
+                es_repetido = true;
+            }
+        }
+        return es_repetido;
+    }
+
 
     private static void mostrarArray(ArrayList<Integer> arrayInt) {
         for (Integer numero : arrayInt) {

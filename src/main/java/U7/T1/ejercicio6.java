@@ -16,22 +16,34 @@ public class ejercicio6 {
         boolean estaCopiado = false;
         arrayNombres.add(nombre);
         int contador = 0;
+        int contadorAUX = 0;
         do {
             System.out.print("Dime un nombre: ");
             nombre = teclado.nextLine();
+            contadorAUX =0;
+            contador =0;
             for (int i = 0; i < arrayNombres.size(); i++) {
                 estaCopiado = false;
                     if (arrayNombres.get(i).equalsIgnoreCase(nombre)){
                         contador++;
-                        if (contador == 1) {
+                        if (contador == 2) {
                             estaCopiado = true;
                         }
                     }
                 if (estaCopiado){
-                    System.out.print("El nombre "+ nombre+" esta repetido, dime un nombre de nuevo: ");
+                    arrayNombres.remove(arrayNombres.size()-1);
+                    System.out.print("El nombre "+ nombre+" esta repetido, dime un nombre de nuevo que no esté repetido, ");
+                    System.out.println("Estos son los nombres que hay actualmente:");
+                    for (String nombres:arrayNombres) {
+                        System.out.println(nombres);
+                    }
                     nombre = teclado.nextLine();
+                    arrayNombres.set(i,nombre);
                 }else{
-                    arrayNombres.add(nombre);
+                    if (contadorAUX <1) {
+                        arrayNombres.add(nombre);
+                        contadorAUX++;
+                    }
                 }
             }
         } while (!nombre.equalsIgnoreCase("fin"));
