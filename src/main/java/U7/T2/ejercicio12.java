@@ -16,12 +16,13 @@ public class ejercicio12 {
         conjuntos1.add(4);
         conjuntos1.add(5);
         conjuntos1.add(6);
+        conjuntos1.add(7);
 
         conjuntos2.add(2);
         conjuntos2.add(3);
         conjuntos2.add(4);
         conjuntos2.add(5);
-        conjuntos2.add(6);
+        conjuntos2.add(7);
         System.out.println(incluido(conjuntos1,conjuntos2));
     }
 
@@ -31,13 +32,13 @@ public class ejercicio12 {
         boolean es_incluido =true;
         int contadorAUX= listaAUX.size()/2;
         for (int i = 0; i < listaAUX.size()/2; i++) {
-            for (int j = listaAUX.size()/2; j < listaAUX.size(); j++) {
+            for (int j = conjuntos1.size(); j < listaAUX.size(); j++) {
                 if (!listaAUX.get(i++).equals(listaAUX.get(j))){
                     es_incluido = false;
                     break;
                 }
             }
         }
-        return es_incluido;
+       return es_incluido;
     }
 }

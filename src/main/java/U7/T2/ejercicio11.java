@@ -4,7 +4,7 @@ import java.util.*;
 
 /* Diseñar un método que devuelva la diferencia de dos conjuntos (elementos que pertenecen al primero,
 pero no al segundo). Con el prototipo: Set diferencia (Set conjunto1, Set conjunto2)*/
-public class actividad11 {
+public class ejercicio11 {
     public static void main(String[] args) {
         Set <String> conjunto1 = new TreeSet<>();
         Set <String> conjunto2= new TreeSet<>();

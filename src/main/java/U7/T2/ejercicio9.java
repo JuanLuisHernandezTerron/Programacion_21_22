@@ -5,7 +5,7 @@ import java.util.*;
 /*Implementar el método unión de dos conjuntos, que devuelva un nuevo conjunto con todos los
 elementos que pertenezcan, al menos, a uno de los dos conjuntos. Su prototipo es:
 Set union (Set conjunto1, Set conjunto2)*/
-public class actividad9 {
+public class ejercicio9 {
     public static void main(String[] args) {
         Set <String> conjunto1 = new TreeSet<>();
         Set <String> conjunto2 = new TreeSet<>();

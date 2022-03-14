@@ -2,7 +2,7 @@ package U7.T2;
 
 import java.util.*;
 
-public class actividad10 {
+public class ejercicio10 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         Set <String> conjunto1 = new TreeSet<>();
@@ -19,8 +19,8 @@ public class actividad10 {
         conjunto2.add("Alfonso");
         conjunto2.add("Antonio");
         conjunto2.add("Maria");
-
         System.out.println(interseccion(conjunto1,conjunto2));
+
     }
 
     private static Set interseccion(Set<String> conjunto1, Set<String> conjunto2) {
@@ -33,7 +33,7 @@ public class actividad10 {
             for (int j = 0; j < listaAUX.size(); j++) {
                 if (listaAUX.get(i).equalsIgnoreCase(listaAUX.get(j))){
                     contadorAUX++;
-                    if (contadorAUX == 2){
+                    if (contadorAUX >= 2){
                         setAUX.add(listaAUX.get(i));
                     }
                 }
