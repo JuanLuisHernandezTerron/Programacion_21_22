@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 public class empleadoPerso extends persona implements Serializable {
     private int sueldo;
@@ -25,12 +26,26 @@ public class empleadoPerso extends persona implements Serializable {
     }
 
     public static void eliminarEmpleado(String dniAUX){
-        mapEmpleado.remove(dniAUX);
+        if (mapEmpleado.containsKey(dniAUX)){
+            mapEmpleado.remove(dniAUX);
+        }else{
+            System.out.println("No existe");
+        }
         System.out.println(mapEmpleado);
     }
 
     public static void visualizarEmpleado(String dniAUX){
-        System.out.println(mapEmpleado.get(dniAUX));
+        if (mapEmpleado.containsKey(dniAUX)){
+            System.out.println(mapEmpleado.get(dniAUX));
+        }else{
+            System.out.println("No existe");
+        }
+//        Set<Map.Entry<String,empleadoPerso>> entradas = mapEmpleado.entrySet();
+//        Iterator <Map.Entry<String,empleadoPerso>> it = entradas.iterator();
+//        while (it.hasNext()){
+//            Map.Entry<String,empleadoPerso> entrada = it.next();
+//
+//        }
     }
 
     public static void realizarCambios(String dniAUX,empleadoPerso empleadoAUX){
@@ -39,6 +54,8 @@ public class empleadoPerso extends persona implements Serializable {
             String clave = it.next();
             if (clave.equalsIgnoreCase(dniAUX)){
                 mapEmpleado.put(dniAUX,empleadoAUX);
+            }else{
+                System.out.println("No existe ese DNI");
             }
         }
     }

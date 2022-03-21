@@ -9,51 +9,19 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class main implements Serializable {
+   private static Scanner teclado = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
         int decision = 0;
         System.out.println("Que deseas hacer, cargar archivos o introducirlos manualmente (responda con 1 para cargar o 2 para manualmente):");
         int respuesta = teclado.nextInt();
-
+        teclado.nextLine(); //Solo cuando sea numero.
         switch (respuesta){
             case 1:
-                Map <String , empleadoPerso> mapAUX = new HashMap<>();
-                empleadoPerso empleado1 = new empleadoPerso("Pedro","12345678S",18,1.56,8500);
-                empleadoPerso empleado2 = new empleadoPerso("Jose","45236874T",25,1.42,8500);
-                empleadoPerso empleado3 = new empleadoPerso("Oscar","21364987F",32,1.98,8500);
-                empleadoPerso empleado4 = new empleadoPerso("Juanlu","23659877G",22,1.72,8500);
-                mapAUX.put(empleado1.getDni(),empleado1);
-                mapAUX.put(empleado2.getDni(),empleado2);
-                mapAUX.put(empleado3.getDni(),empleado3);
-                mapAUX.put(empleado4.getDni(),empleado4);
-                try {
-                    ObjectOutputStream fichero = new ObjectOutputStream(new FileOutputStream("/home/juanlu/Escritorio/Programacion_21_22/src/main/java/U7/T4/Ejercicio1/empleados.dat",true));
-                    fichero.writeObject(mapAUX);
-                    fichero.close();
-                }catch (IOException ex){
-                    ex.printStackTrace();
-                }
+                leerFichero();
                 empleadoPerso.cargarMapa();
                 break;
             case 2:
-                System.out.println("Quieres seguir metiendo a empleados? ");
-                String respu = teclado.next();
-                    do {
-                        System.out.println("Dime tu nombre:");
-                        String nombre = teclado.next();
-                        System.out.println("Dime tu dni:");
-                        String dni = teclado.next();
-                        System.out.println("Dime tu edad");
-                        int edad = teclado.nextInt();
-                        System.out.println("Dime tu estatura:");
-                        double estatura = teclado.nextDouble();
-                        System.out.println("Dime tu sueldo");
-                        int sueldo = teclado.nextInt();
-                        empleadoPerso empleado = new empleadoPerso(nombre,dni,edad,estatura,sueldo);
-                        empleado.introducirEmpleado(empleado);
-                        System.out.println("Quieres seguir metiendo a empleados? ");
-                        respu = teclado.next();
-                    }while (!respu.equalsIgnoreCase("no"));
+                introducirManualmente();
                 break;
         }
         do {
@@ -115,8 +83,48 @@ public class main implements Serializable {
                     empleado.introducirEmpleado(empleado);
                     break;
             }
+            empleadoPerso.volcarBinario();
         }while (decision !=6);
         System.out.println("Gracias por utiliza el programa!");
-        empleadoPerso.volcarBinario();
+    }
+
+    public static void introducirManualmente(){
+        System.out.println("Quieres seguir metiendo a empleados? ");
+        String respu = teclado.next();
+        do {
+            System.out.println("Dime tu nombre:");
+            String nombre = teclado.next();
+            System.out.println("Dime tu dni:");
+            String dni = teclado.next();
+            System.out.println("Dime tu edad");
+            int edad = teclado.nextInt();
+            System.out.println("Dime tu estatura:");
+            double estatura = teclado.nextDouble();
+            System.out.println("Dime tu sueldo");
+            int sueldo = teclado.nextInt();
+            empleadoPerso empleado = new empleadoPerso(nombre,dni,edad,estatura,sueldo);
+            empleado.introducirEmpleado(empleado);
+            System.out.println("Quieres seguir metiendo a empleados? ");
+            respu = teclado.next();
+        }while (!respu.equalsIgnoreCase("no"));
+    }
+
+    public static void leerFichero(){
+        Map <String , empleadoPerso> mapAUX = new HashMap<>();
+        empleadoPerso empleado1 = new empleadoPerso("Pedro","12345678S",18,1.56,8500);
+        empleadoPerso empleado2 = new empleadoPerso("Jose","45236874T",25,1.42,8500);
+        empleadoPerso empleado3 = new empleadoPerso("Oscar","21364987F",32,1.98,8500);
+        empleadoPerso empleado4 = new empleadoPerso("Juanlu","23659877G",22,1.72,8500);
+        mapAUX.put(empleado1.getDni(),empleado1);
+        mapAUX.put(empleado2.getDni(),empleado2);
+        mapAUX.put(empleado3.getDni(),empleado3);
+        mapAUX.put(empleado4.getDni(),empleado4);
+        try {
+            ObjectOutputStream fichero = new ObjectOutputStream(new FileOutputStream("/home/juanlu/Escritorio/Programacion_21_22/src/main/java/U7/T4/Ejercicio1/empleados.dat",true));
+            fichero.writeObject(mapAUX);
+            fichero.close();
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
     }
 }
