@@ -2,10 +2,10 @@ package U7.EjerciciosRepaso.Entregable21Tarde;
 
 import java.io.*;
 import java.util.*;
-
+// nombreMapa.get({Metemos la clave y nos devolvera la lista q es el valor}).add({introducimos el valor que queremos guardar})
 public class Instituto {
     private String nombre;
-    private static Map <Unidad,ArrayList<alumno>> MapaAlumnos = new LinkedHashMap<>();
+    private Map <Unidad,ArrayList<alumno>> MapaAlumnos = new LinkedHashMap<>();
 
     public Instituto(String nombre) {
         this.nombre = nombre;
@@ -111,9 +111,5 @@ public class Instituto {
         return "Instituto{" +
                 "nombre='" + nombre + '\'' +
                 '}';
-    }
-
-    public static Map<Unidad, ArrayList<alumno>> getMapaAlumnos() {
-        return MapaAlumnos;
     }
 }

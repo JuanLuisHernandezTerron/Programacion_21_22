@@ -1,5 +1,6 @@
 package U7.EjerciciosRepaso.Entregable21Tarde;
 
+
 public class main {
     public static void main(String[] args) {
         Instituto instituto1 = new Instituto("Los Alamos");

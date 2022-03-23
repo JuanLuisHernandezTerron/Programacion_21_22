@@ -12,8 +12,6 @@ public class Unidad {
 
     @Override
     public String toString() {
-        return "Unidad{" +
-                "nombreUnidad='" + nombreUnidad + '\'' +
-                '}';
+        return "nombreUnidad='" + nombreUnidad;
     }
 }
