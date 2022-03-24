@@ -29,6 +29,8 @@ public class main {
         c1.perrosPorEdad(perro.raza.PASTORALEMAN);
         System.out.println();
         c1.guardarFichero();
+        System.out.println();
+        c1.cargarFicheros();
 
     }
 }

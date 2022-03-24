@@ -1,9 +1,6 @@
 package U7.EjerciciosRepaso.Examen1920Manana;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
+import java.io.*;
 import java.util.*;
 
 public class concurso implements Serializable {
@@ -78,6 +75,22 @@ public class concurso implements Serializable {
         try(ObjectOutputStream escribirFichero = new ObjectOutputStream(new FileOutputStream("C:\\Users\\juanlu\\Desktop\\Programacion_21_22\\src\\main\\java\\U7\\EjerciciosRepaso\\Examen1920Manana\\perros.dat",true))){
             escribirFichero.writeObject(listaTodosPerros);
         }catch (IOException ex){
+            ex.printStackTrace();
+        }
+    }
+
+    public void cargarFicheros(){
+        try(ObjectInputStream leerFichero = new ObjectInputStream((new FileInputStream("C:\\Users\\juanlu\\Desktop\\Programacion_21_22\\src\\main\\java\\U7\\EjerciciosRepaso\\Examen1920Manana\\perros.dat")))){
+            List<perro> completa= (List<perro>) leerFichero.readObject();
+            mapaConcurso.clear();
+            System.out.println("Mapa borrado");
+            Iterator<perro> it0 = completa.iterator();
+            while (it0.hasNext()){
+                perro perroAUX = it0.next();
+                addDog(perroAUX,perroAUX.getRazaPerro());
+            }
+            System.out.println(mapaConcurso);
+        }catch (IOException | ClassNotFoundException ex){
             ex.printStackTrace();
         }
     }
