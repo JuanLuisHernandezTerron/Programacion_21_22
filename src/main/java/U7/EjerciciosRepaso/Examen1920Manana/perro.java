@@ -1,8 +1,9 @@
 package U7.EjerciciosRepaso.Examen1920Manana;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class perro {
+public class perro implements Serializable {
     private String nombre;
     private Integer edad;
     private double pesoPerro;
@@ -32,11 +33,13 @@ public class perro {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        perro perro = (perro) o;
-        return Double.compare(perro.pesoPerro, pesoPerro) == 0 && vacunas == perro.vacunas && Objects.equals(nombre, perro.nombre) && Objects.equals(edad, perro.edad) && Objects.equals(propietario, perro.propietario) && razaPerro == perro.razaPerro;
+    public String toString() {
+        return "nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                ", pesoPerro=" + pesoPerro +
+                ", vacunas=" + vacunas +
+                ", propietario=" + propietario +
+                ", razaPerro=" + razaPerro;
     }
 
     @Override

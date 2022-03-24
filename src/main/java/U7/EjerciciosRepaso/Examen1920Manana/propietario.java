@@ -1,17 +1,29 @@
 package U7.EjerciciosRepaso.Examen1920Manana;
 
-public class propietario {
+import java.io.Serializable;
+
+public class propietario implements Serializable {
     private String nombre;
     private String apellidos;
-    private int contador = 0;
-    private static int numeroSocio = 0;
+    private static int contador = 0;
+    private int numeroSocio = 0;
     private String paisOrigen;
 
-    public propietario(String nombre, String apellidos, long numeroSocio, String paisOrigen) {
+    public propietario(String nombre, String apellidos, String paisOrigen) {
         setNombre(nombre);
         setApellidos(apellidos);
-        setNumeroSocio();
+        this.numeroSocio = contador++;
         setPaisOrigen(paisOrigen);
+    }
+
+    @Override
+    public String toString() {
+        return "propietario{" +
+                "nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", numeroSocio=" + numeroSocio +
+                ", paisOrigen='" + paisOrigen + '\'' +
+                '}';
     }
 
     public String getNombre() {
@@ -34,9 +46,6 @@ public class propietario {
         return numeroSocio;
     }
 
-    public void setNumeroSocio() {
-        this.numeroSocio = contador++;
-    }
 
     public String getPaisOrigen() {
         return paisOrigen;

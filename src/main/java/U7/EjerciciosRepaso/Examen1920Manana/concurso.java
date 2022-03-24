@@ -1,8 +1,12 @@
 package U7.EjerciciosRepaso.Examen1920Manana;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.*;
 
-public class concurso {
+public class concurso implements Serializable {
     private String nombreConcurso;
     private String localidad;
     private List<perro> listaPerrosConcurso;
@@ -23,22 +27,77 @@ public class concurso {
         }else{
             mapaConcurso.get(razaPerro).add(perroAUX);
         }
+        System.out.println(mapaConcurso);
     }
 
     public void disqualifyDog(perro perroAUX){
-        if (mapaConcurso.containsValue(perroAUX)){
-            Set <Map.Entry<perro.raza,ArrayList<perro>>> guardarValores = mapaConcurso.entrySet();
-            System.out.println(guardarValores);
-            Iterator<Map.Entry<perro.raza,ArrayList<perro>>> it0 = guardarValores.iterator();
-            while (it0.hasNext()){
-                Map.Entry<perro.raza, ArrayList<perro>> entrada = it0.next();
-                if (entrada.equals(perroAUX)){
-                    it0.remove();
+        boolean es_encontrado = false;
+        Iterator<perro.raza> it0 = mapaConcurso.keySet().iterator();
+        while (it0.hasNext()){
+            perro.raza razaAUX = it0.next();
+            ArrayList<perro> ListaPerro = mapaConcurso.get(razaAUX);
+            Iterator<perro> it1 = ListaPerro.iterator();
+            while (it1.hasNext()){
+                perro perroAUXLista = it1.next();
+                if (perroAUXLista.equals(perroAUX)){
+                    it1.remove();
+                    es_encontrado = true;
                 }
             }
-        }else{
-            System.out.println("El perro no esta registrado en el concurso");
         }
+        if (!es_encontrado){
+            System.out.println("Perro no encontrado en el sistema");
+        }
+        System.out.println(mapaConcurso);
+    }
+
+    public void ownerDogs(int numeroSocio){
+        Iterator<perro.raza> it0 = mapaConcurso.keySet().iterator();
+        while (it0.hasNext()){
+            perro.raza razaAUX = it0.next();
+            List<perro> listaPerros = mapaConcurso.get(razaAUX);
+            Iterator<perro> it1 = listaPerros.iterator();
+            while (it1.hasNext()){
+                perro perroAUX = it1.next();
+                if (perroAUX.getPropietario().getNumeroSocio() == numeroSocio){
+                    System.out.println(perroAUX);
+                }
+            }
+        }
+    }
+
+    public void guardarFichero(){
+        ArrayList<perro> listaTodosPerros = new ArrayList<>();
+        Iterator<perro.raza> it0= mapaConcurso.keySet().iterator();
+        while (it0.hasNext()){
+            perro.raza razaAUX = it0.next();
+            ArrayList<perro> listaPerros= mapaConcurso.get(razaAUX);
+            listaTodosPerros.addAll(listaPerros); //Mete todos los valores de cada clave
+        }
+
+        try(ObjectOutputStream escribirFichero = new ObjectOutputStream(new FileOutputStream("C:\\Users\\juanlu\\Desktop\\Programacion_21_22\\src\\main\\java\\U7\\EjerciciosRepaso\\Examen1920Manana\\perros.dat",true))){
+            escribirFichero.writeObject(listaTodosPerros);
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+    }
+
+    public void perrosPorPeso(perro.raza perroAUX){
+        List <perro> listaPerros = new ArrayList<>();
+        if (mapaConcurso.containsKey(perroAUX)){
+            listaPerros = mapaConcurso.get(perroAUX);
+        }
+        Collections.sort(listaPerros,new ordenarPesoPerro());
+        System.out.println(listaPerros);
+    }
+
+    public void perrosPorEdad(perro.raza perroAUX){
+        List <perro> listaPerros = new ArrayList<>();
+        if (mapaConcurso.containsKey(perroAUX)){
+            listaPerros = mapaConcurso.get(perroAUX);
+        }
+        Collections.sort(listaPerros, new ordenarPorEdad());
+        System.out.println(listaPerros);
     }
 
     public String getNombreConcurso() {
