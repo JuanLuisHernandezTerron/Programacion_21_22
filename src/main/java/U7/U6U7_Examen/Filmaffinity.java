@@ -74,7 +74,6 @@ public class Filmaffinity {
                 peliAUX2 = peliAUX;
             }
         }
-
         return peliAUX2;
     }
 
