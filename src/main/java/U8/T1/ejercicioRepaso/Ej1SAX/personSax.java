@@ -1,4 +1,4 @@
-package U8.T1.ejercicioRepaso.Ej1;
+package U8.T1.ejercicioRepaso.Ej1SAX;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -34,18 +34,18 @@ public class personSax extends DefaultHandler {
         }
     }
 
-    @Override
-    public void characters(char[] ch, int start, int length) throws SAXException {
-        super.characters(ch, start, length);
-        String content = new String(ch, start, length);
-        contadorAtributo++;
-        if (contadorAtributo == 1){
-            arrayPersonas.get(contadorPersona).setNombre(content);
-        }else{
-            Integer edad = Integer.valueOf(content);
-            arrayPersonas.get(contadorPersona).setEdad(edad);
-        }
-    }
+//    @Override
+//    public void characters(char[] ch, int start, int length) throws SAXException {
+//        super.characters(ch, start, length);
+//        String content = new String(ch, start, length);
+//        contadorAtributo++;
+//        if (contadorAtributo == 1){
+//            arrayPersonas.get(contadorPersona).setNombre(content);
+//        }else{
+//            Integer edad = Integer.valueOf(content);
+//            arrayPersonas.get(contadorPersona).setEdad(edad);
+//        }
+//    }
 
 
     @Override
