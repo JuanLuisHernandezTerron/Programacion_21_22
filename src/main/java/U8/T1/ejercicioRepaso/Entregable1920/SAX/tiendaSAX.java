@@ -1,4 +1,4 @@
-package U8.T1.ejercicioRepaso.Entregable1920;
+package U8.T1.ejercicioRepaso.Entregable1920.SAX;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;

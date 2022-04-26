@@ -1,6 +1,6 @@
-package U8.T1.ejercicioRepaso.Entregable1920;
+package U8.T1.ejercicioRepaso.Entregable1920.SAX;
 
-import U8.T1.ejercicioRepaso.Ej1SAX.personSax;
+import U8.T1.ejercicioRepaso.Entregable1920.SAX.tiendaSAX;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 

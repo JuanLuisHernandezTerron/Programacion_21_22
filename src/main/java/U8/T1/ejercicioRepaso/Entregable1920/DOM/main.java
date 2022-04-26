@@ -15,22 +15,9 @@ import java.io.IOException;
 
 public class main {
     public static void main(String[] args) {
-
-        try{
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            Document doc = db.parse(new File("src/main/java/U8/T1/ejercicioRepaso/Entregable1920/DOM/personas.xml"));
-
-            Element root = doc.getDocumentElement();
-            NodeList nl = root.getChildNodes();
-            for (int i = 0; i < nl.getLength(); i++) {
-                if (nl.item(i).getNodeType() == Node.ELEMENT_NODE){
-                    
-                }
-            }
-
-        }catch (ParserConfigurationException | IOException | SAXException ex){
-            System.out.println(ex.getStackTrace());
-        }
+        recorridoDOM.numNodosHijos();
+        System.out.println();
+        recorridoDOM.mostrarXMLDom();
+        recorridoDOM.mostrarContenidoEtiqueta("tienda");
     }
 }

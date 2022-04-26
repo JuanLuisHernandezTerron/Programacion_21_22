@@ -1,4 +1,4 @@
-package U8.T1.ejercicioRepaso.Entregable1920;
+package U8.T1.ejercicioRepaso.Entregable1920.SAX;
 
 public class tienda {
     private String nombre;
