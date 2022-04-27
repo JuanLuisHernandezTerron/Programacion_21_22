@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tiendas>
+    <!-- COMENTARIO AÑADIDO DESDE DOM -->
+    <tienda>
+        <nombre>SupeMas</nombre>
+        <localidad>Palomares</localidad>
+        <establecimientos>5</establecimientos>
+    </tienda>
+    <!-- COMENTARIO AÑADIDO DESDE DOM -->
+    <tienda id="2">
+        <nombre>Carrefour</nombre>
+        <localidad>SanJuan</localidad>
+        <establecimientos>1</establecimientos>
+    </tienda>
+    <!-- COMENTARIO AÑADIDO DESDE DOM -->
+    <tienda id="3">
+        <nombre>MAS</nombre>
+        <localidad>Camas</localidad>
+        <establecimientos>1</establecimientos>
+    </tienda>
+    <!-- COMENTARIO AÑADIDO DESDE DOM -->
+    <tienda id="4">
+        <nombre>Coviran</nombre>
+        <localidad>Bormujos</localidad>
+        <establecimientos>2</establecimientos>
+    </tienda>
+    <!-- COMENTARIO AÑADIDO DESDE DOM -->
+    <tienda id="5">
+        <nombre>Coviran</nombre>
+        <localidad>Bormujos</localidad>
+        <establecimientos>2</establecimientos>
+    </tienda>
+    <tienda>
+        <nombre>Lidl</nombre>
+        <localidad>Bollullos</localidad>
+        <establecimientos>3</establecimientos>
+    </tienda>
+</tiendas>

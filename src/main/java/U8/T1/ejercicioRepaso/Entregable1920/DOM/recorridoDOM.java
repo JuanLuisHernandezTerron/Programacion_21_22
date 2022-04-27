@@ -20,12 +20,7 @@ public class recorridoDOM {
             Document doc = db.parse(new File("src/main/java/U8/T1/ejercicioRepaso/Entregable1920/DOM/personas.xml"));
             Element root = doc.getDocumentElement();
             NodeList nl = root.getChildNodes();
-            for (int i = 0; i < nl.getLength(); i++) {
-                if (nl.item(i).getNodeType() == Node.ELEMENT_NODE) {
-                    contadorNodosHijos++;
-                }
-            }
-            System.out.println("Tiene " + contadorNodosHijos + " nodos");
+            System.out.println("Tiene " + nl.getLength() + " nodos");
         } catch (ParserConfigurationException | DOMException | SAXException | IOException ex) {
             System.out.println(ex.getStackTrace());
         }
@@ -95,10 +90,10 @@ public class recorridoDOM {
                                 if (el2.getTagName().equalsIgnoreCase("nombre")) {
                                     System.out.print(el2.getTagName() + ": ");
                                     System.out.println(el2.getTextContent());
-                                }else if(el2.getTagName().equalsIgnoreCase("localidad")){
+                                } else if (el2.getTagName().equalsIgnoreCase("localidad")) {
                                     System.out.print(el2.getTagName() + ": ");
                                     System.out.println(el2.getTextContent());
-                                }else if(el2.getTagName().equalsIgnoreCase("establecimientos")){
+                                } else if (el2.getTagName().equalsIgnoreCase("establecimientos")) {
                                     System.out.print(el2.getTagName() + ": ");
                                     System.out.println(el2.getTextContent());
                                 }
