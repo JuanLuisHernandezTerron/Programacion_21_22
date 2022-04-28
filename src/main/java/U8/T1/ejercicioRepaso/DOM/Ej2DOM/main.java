@@ -1,4 +1,4 @@
-package U8.T1.ejercicioRepaso.Ej2DOM;
+package U8.T1.ejercicioRepaso.DOM.Ej2DOM;
 
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;

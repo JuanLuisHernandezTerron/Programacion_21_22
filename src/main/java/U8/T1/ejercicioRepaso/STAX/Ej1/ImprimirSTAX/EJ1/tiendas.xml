@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tiendas>
+    <tienda id="1">
+        <nombre>SupeMas</nombre>
+        <localidad>Palomares</localidad>
+        <establecimientos>5</establecimientos>
+    </tienda>
+    <tienda id="2">
+        <nombre>Carrefour</nombre>
+        <localidad>SanJuan</localidad>
+        <establecimientos>1</establecimientos>
+    </tienda>
+    <tienda id="3">
+        <nombre>MAS</nombre>
+        <localidad>Camas</localidad>
+        <establecimientos>1</establecimientos>
+    </tienda>
+    <tienda id="4">
+        <nombre>Coviran</nombre>
+        <localidad>Bormujos</localidad>
+        <establecimientos>2</establecimientos>
+    </tienda>
+    <tienda id="5">
+        <nombre>Coviran</nombre>
+        <localidad>Bormujos</localidad>
+        <establecimientos>2</establecimientos>
+    </tienda>
+    <tienda id="6">
+        <nombre>Lidl</nombre>
+        <localidad>Bollullos</localidad>
+        <establecimientos>3</establecimientos>
+    </tienda>
+</tiendas>

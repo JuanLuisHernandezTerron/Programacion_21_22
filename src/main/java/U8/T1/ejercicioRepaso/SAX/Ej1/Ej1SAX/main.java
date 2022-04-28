@@ -1,4 +1,4 @@
-package U8.T1.ejercicioRepaso.Ej1SAX;
+package U8.T1.ejercicioRepaso.SAX.Ej1.Ej1SAX;
 
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;

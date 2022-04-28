@@ -1,4 +1,4 @@
-package U8.T1.ejercicioRepaso.Ej1SAX;
+package U8.T1.ejercicioRepaso.DOM.Ej2DOM;
 
 public class persona {
     private String nombre;
