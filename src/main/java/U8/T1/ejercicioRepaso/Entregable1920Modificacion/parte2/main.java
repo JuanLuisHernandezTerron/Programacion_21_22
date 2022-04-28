@@ -1,9 +1,9 @@
-package U8.T1.ejercicioRepaso.Entregable1920Modificacion;
+package U8.T1.ejercicioRepaso.Entregable1920Modificacion.parte2;
 
 import U8.T1.ejercicioRepaso.Entregable1920Modificacion.parte2.formula1;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
-import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -15,7 +15,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
-import java.io.IOException;
+
 
 public class main {
     public static void main(String[] args) {
@@ -31,12 +31,12 @@ public class main {
         try{
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
-            Document doc = db.parse(new File("src/main/java/U8/T1/ejercicioRepaso/Entregable1920Modificacion/parte2/cero.xml"));
+            Document doc = db.newDocument();
 
             TransformerFactory tfg = TransformerFactory.newInstance();
             Transformer transformer = tfg.newTransformer();
 
-            Node root = doc.getDocumentElement();
+            Element root = doc.createElement("escuderias"); //Se crea la etiqueta raiz ya que no está creada
             DOMSource origenDOM = new DOMSource(root);
             File f1XML = new File("src/main/java/U8/T1/ejercicioRepaso/Entregable1920Modificacion/parte2/cero.xml");
             StreamResult destino = new StreamResult(f1XML);
@@ -58,7 +58,7 @@ public class main {
                 f1.appendChild(numeroPilotos);
             }
             transformer.transform(origenDOM, destino);
-        }catch (ParserConfigurationException | IOException | SAXException | TransformerConfigurationException ex){
+        }catch (ParserConfigurationException | TransformerConfigurationException ex){
             System.out.println(ex.getStackTrace());
         } catch (TransformerException e) {
             throw new RuntimeException(e);

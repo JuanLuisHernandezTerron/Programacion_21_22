@@ -1,1 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<escuderias>
+    <Escuderia>
+        <NombreEscuderia>Mercedes-AMG-Petronas</NombreEscuderia>
+        <PaisSede>GranBretaña</PaisSede>
+        <PatrocinadorPrincipal>Petronas</PatrocinadorPrincipal>
+        <NumeroPilotos>2</NumeroPilotos>
+    </Escuderia>
+    <Escuderia>
+        <NombreEscuderia>Ferrari</NombreEscuderia>
+        <PaisSede>Italia</PaisSede>
+        <PatrocinadorPrincipal>Santander Banco</PatrocinadorPrincipal>
+        <NumeroPilotos>2</NumeroPilotos>
+    </Escuderia>
+    <Escuderia>
+        <NombreEscuderia>Alpine F1 BTW</NombreEscuderia>
+        <PaisSede>Francia</PaisSede>
+        <PatrocinadorPrincipal>BTW</PatrocinadorPrincipal>
+        <NumeroPilotos>2</NumeroPilotos>
+    </Escuderia>
+    <Escuderia>
+        <NombreEscuderia>RedBull</NombreEscuderia><PaisSede>GranBretaña</PaisSede><PatrocinadorPrincipal>RedBull</PatrocinadorPrincipal><NumeroPilotos>2</NumeroPilotos></Escuderia><Escuderia><NombreEscuderia>AlphaTauri F1</NombreEscuderia><PaisSede>Italia</PaisSede><PatrocinadorPrincipal>AlphaTauri Moda</PatrocinadorPrincipal><NumeroPilotos>2</NumeroPilotos></Escuderia><Escuderia><NombreEscuderia>AsontMartin F1</NombreEscuderia><PaisSede>GranBretaña</PaisSede><PatrocinadorPrincipal>Aramco</PatrocinadorPrincipal><NumeroPilotos>2</NumeroPilotos></Escuderia><Escuderia><NombreEscuderia>Williams F1 Team</NombreEscuderia><PaisSede>GranBretaña</PaisSede><PatrocinadorPrincipal>Lavazza</PatrocinadorPrincipal><NumeroPilotos>2</NumeroPilotos></Escuderia><Escuderia><NombreEscuderia>HaasF1 Team</NombreEscuderia><PaisSede>GranBretaña</PaisSede><PatrocinadorPrincipal>1&amp;1</PatrocinadorPrincipal><NumeroPilotos>2</NumeroPilotos></Escuderia></escuderias>
