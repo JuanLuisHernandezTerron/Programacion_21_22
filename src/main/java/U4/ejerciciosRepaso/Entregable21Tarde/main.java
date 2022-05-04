@@ -7,7 +7,7 @@ public class main {
         personaje personaje1 = new personaje(personaje.tipopersonaje.TAILS, 150.0,100,80);
         enemigo enemi1 = new enemigo(tipoEnemigo.BUZZBOMBER);
         enemigo enemi2 = new enemigo(tipoEnemigo.CHOPPER);
-        enemigo.tipoEnemigo [] enemigoPrueba = new tipoEnemigo[]{enemi1.getEnemigoNombre(),enemi2.getEnemigoNombre()};
+        tipoEnemigo [] enemigoPrueba = new tipoEnemigo[]{enemi1.getEnemigoNombre(),enemi2.getEnemigoNombre()};
         escenario escenario1 = new escenario(enemigoPrueba);
         videojuego video1 = new videojuego(personaje1,escenario1);
         /////////////////////////////////////////////////////////////////
@@ -16,7 +16,7 @@ public class main {
         enemigo enemigo4 = new enemigo(tipoEnemigo.MOTOBUG);
         enemigo enemigo5 = new enemigo(tipoEnemigo.COCONOUTS);
         enemigo enemigo6 = new enemigo(tipoEnemigo.BUZZBOMBER);
-        enemigo.tipoEnemigo [] arraytipoEnemigos = new tipoEnemigo[] {enemigo3.getEnemigoNombre(), enemigo4.getEnemigoNombre(),enemigo5.getEnemigoNombre(),enemigo6.getEnemigoNombre()};
+        tipoEnemigo [] arraytipoEnemigos = new tipoEnemigo[] {enemigo3.getEnemigoNombre(), enemigo4.getEnemigoNombre(),enemigo5.getEnemigoNombre(),enemigo6.getEnemigoNombre()};
         escenario escenario2 = new escenario(arraytipoEnemigos);
         escenario2.generarEnemigos();
         escenario2.generarEnemigos();
