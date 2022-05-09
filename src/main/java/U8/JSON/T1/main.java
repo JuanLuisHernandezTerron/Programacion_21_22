@@ -46,7 +46,7 @@ public class main {
                 posicionesRamos.add(Arrays.toString(arrayFutbolistaAUX[i].getPosicionJugadore()));
             }
         }
-        
+
         System.out.println("Las posiciones de ramos son"+posicionesRamos);
     }
 }
