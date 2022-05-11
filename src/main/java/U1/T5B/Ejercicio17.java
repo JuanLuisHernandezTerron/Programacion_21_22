@@ -9,12 +9,12 @@ public class Ejercicio17 {
     System.out.print("Dime un numero entero: ");
     int numeroIntroducido = teclado.nextInt();
 
-    int numeroPequeño = numeroIntroducido /10;
+    int numeroPequeno = numeroIntroducido /10;
     int numeroMediano = numeroIntroducido /100;
     int numeroMayor = numeroIntroducido /10000;
 
     if (numeroIntroducido < 100){
-      System.out.println(numeroPequeño);
+      System.out.println(numeroPequeno);
     }else if (numeroIntroducido < 1000){
       System.out.println(numeroMediano);
     }else{

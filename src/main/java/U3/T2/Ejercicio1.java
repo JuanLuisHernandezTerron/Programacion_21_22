@@ -18,14 +18,14 @@ public class Ejercicio1 {
 
     static void calcularPalabramax (String palabra1, String palabra2){
 
-        int tamañoPalabra1 = palabra1.length();
+        int tamanoPalabra1 = palabra1.length();
 
-        int tamañoPalabra2  = palabra2.length();
+        int tamanoPalabra2  = palabra2.length();
 
-        if (tamañoPalabra1 < tamañoPalabra2){
-            System.out.println("La palabra "+ palabra1 + " es la que tiene menor tamaño con "+ tamañoPalabra1 + " caracteres");
-        }else if (tamañoPalabra2 < tamañoPalabra1){
-            System.out.println("La palabra "+ palabra2 + " es la que tiene mayor tamaño con " +tamañoPalabra2 + " caracteres");
+        if (tamanoPalabra1 < tamanoPalabra2){
+            System.out.println("La palabra "+ palabra1 + " es la que tiene menor tamaño con "+ tamanoPalabra1 + " caracteres");
+        }else if (tamanoPalabra2 < tamanoPalabra1){
+            System.out.println("La palabra "+ palabra2 + " es la que tiene mayor tamaño con " +tamanoPalabra2 + " caracteres");
         }else{
             System.out.println("Las dos palabras son iguales");
         }

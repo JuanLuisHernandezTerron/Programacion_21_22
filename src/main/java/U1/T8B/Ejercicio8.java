@@ -1,11 +1,11 @@
 package U1.T8B;
 
 import java.util.Scanner;
-//Realiza un programa que calcule las horas transcurridas entre dos horas de dos d√≠as de la semana.
-// No se tendr√°n en cuenta los minutos ni los segundos.
-// El d√≠a de la semana se puede pedir como un n√∫mero (del 1 al 7) o como una cadena
-// (de ‚Äúlunes‚Äù a ‚Äúdomingo‚Äù). Se debe comprobar que el usuario introduce los datos
-// correctamente y que el segundo d√≠a es posterior al primero.
+//Realiza un programa que calcule las horas transcurridas entre dos horas de dos dÌas de la semana.
+// No se tendr·n en cuenta los minutos ni los segundos.
+// El dÌa de la semana se puede pedir como un n˙mero (del 1 al 7) o como una cadena
+// (de ìlunesî a ìdomingoî). Se debe comprobar que el usuario introduce los datos
+// correctamente y que el segundo dÌa es posterior al primero.
 public class Ejercicio8 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);

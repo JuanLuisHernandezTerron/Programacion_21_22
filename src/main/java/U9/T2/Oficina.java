@@ -1,7 +1,7 @@
 package U9.T2;
 
 public class Oficina {
-    private int codigoOficina;
+    private String codigoOficina;
     private String city;
     private String telephone;
     private String addressLine1;
@@ -11,7 +11,7 @@ public class Oficina {
     private String postalcode;
     private String territory;
 
-    public Oficina(int codigoOficina, String city, String telephone, String addressLine1, String addressLine2, String state, String country, String postalcode, String territory) {
+    public Oficina(String codigoOficina, String city, String telephone, String addressLine1, String addressLine2, String state, String country, String postalcode, String territory) {
         this.codigoOficina = codigoOficina;
         this.city = city;
         this.telephone = telephone;
@@ -23,11 +23,11 @@ public class Oficina {
         this.territory = territory;
     }
 
-    public int getCodigoOficina() {
+    public String getCodigoOficina() {
         return codigoOficina;
     }
 
-    public void setCodigoOficina(int codigoOficina) {
+    public void setCodigoOficina(String codigoOficina) {
         this.codigoOficina = codigoOficina;
     }
 
