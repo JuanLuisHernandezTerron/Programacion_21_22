@@ -1,7 +1,5 @@
 package U9.T3;
 
-import U9.T2.ConexionBBDD;
-
 import java.sql.*;
 import java.util.Scanner;
 
@@ -11,31 +9,31 @@ public class gestorInserccion {
         System.out.println("Dime customerNumber");
         int customerNumber = sc.nextInt();
         System.out.println("Dime customerName");
-        String customerName = sc.nextLine();
+        String customerName = sc.next();
         System.out.println("Dime contactLastName");
-        String contactLastName = sc.nextLine();
+        String contactLastName = sc.next();
         System.out.println("Dime contactFirstName");
-        String contactFirstName = sc.nextLine();
+        String contactFirstName = sc.next();
         System.out.println("Dime phone");
-        String phone = sc.nextLine();
+        String phone = sc.next();
         System.out.println("Dime addressLine1");
-        String addressLine1 = sc.nextLine();
+        String addressLine1 = sc.next();
         System.out.println("Dime addressLine2");
-        String addressLine2 = sc.nextLine();
+        String addressLine2 = sc.next();
         System.out.println("Dime city");
-        String city = sc.nextLine();
+        String city = sc.next();
         System.out.println("Dime state");
-        String state = sc.nextLine();
+        String state = sc.next();
         System.out.println("Dime postalCode");
-        String postalCode = sc.nextLine();
+        String postalCode = sc.next();
         System.out.println("Dime country");
-        String country = sc.nextLine();
+        String country = sc.next();
         System.out.println("Dime creditLimit");
         double creditLimit = sc.nextDouble();
         try {
             Connection c = conexionBBDD.getConexion();
-            PreparedStatement statement = c.prepareStatement("INSERT INTO 'customers' ('customerNumber','customerName','contactLastName','contactFirstName','phone','addressLine1','addressLine2','city','state','postalCode','country','creditLimit') VALUES" +
-                    "(?,?,?,?,?,?,?,?,?,?,?,?)");
+            PreparedStatement statement = c.prepareStatement("INSERT INTO customers (customerNumber,customerName,contactLastName,contactFirstName,phone,addressLine1,addressLine2,city,state,postalCode,country,creditLimit) VALUES" +
+                    "(?,?,?,?,?,?,?,?,?,?,?,?)"); //No poner comillas simples a la hora de insertar datos
             statement.setInt(1, customerNumber);
             statement.setString(2, customerName);
             statement.setString(3, contactLastName);
@@ -48,7 +46,7 @@ public class gestorInserccion {
             statement.setString(10, postalCode);
             statement.setString(11, country);
             statement.setDouble(12, creditLimit);
-            statement.executeQuery();
+            statement.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }

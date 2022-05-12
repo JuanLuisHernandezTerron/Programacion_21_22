@@ -18,11 +18,25 @@ public class main {
                     gestorInserccion.insertarCliente();
                     break;
                 case 2:
-
+                    System.out.println("Dime un id de empleado");
+                    int id_emple = sc.nextInt();
+                    System.out.println("Dime un id de cliente");
+                    int id_cliente = sc.nextInt();
+                    gestorActualizar.asignarEmple(id_emple,id_cliente);
                     break;
                 case 3:
+                    System.out.println("Dime un id de pedido");
+                    int id_pedido = sc.nextInt();
+                    System.out.println("Dime un id de producto");
+                    String id_producto = sc.next();
+                    System.out.println("Dime la cantidad que quieres ingresar");
+                    int cantidadIngresar = sc.nextInt();
+                    gestorActualizar.asignarProductoPedido(id_pedido,id_producto,cantidadIngresar);
                     break;
                 case 4:
+                    System.out.println("Dime el id de un pedido");
+                    int id_pedidoAUX = sc.nextInt();
+                    gestorPedido.getDetalles(id_pedidoAUX);
                     break;
             }
         } while (numeroHacer != 5);
