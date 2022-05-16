@@ -1,6 +1,6 @@
 package U3.T2;
 //Pedir el nombre completo (nombre y apellidos) al usuario. El programa debe eliminar cualquier vocal del nombre.
-// Por ejemplo: "Álvaro Pérez" se mostrará como "lvr Prz". Sólo se eliminarán las vocales (mayúsculas, minúsculas y
+// Por ejemplo: "ï¿½lvaro Pï¿½rez" se mostrarï¿½ como "lvr Prz". Sï¿½lo se eliminarï¿½n las vocales (mayï¿½sculas, minï¿½sculas y
 // acentuadas). El resto de caracteres no se modifican.
 
 import java.util.Scanner;
@@ -13,7 +13,7 @@ public class Ejercicio5 {
         String fraseIntroducida = teclado.nextLine();
 
         int longitudFrase = fraseIntroducida.length();
-        String vocales = "aeiouáéíóúAEIOUÁÉÍÓÚ";
+        String vocales = "aeiouï¿½ï¿½ï¿½ï¿½ï¿½AEIOUï¿½ï¿½ï¿½ï¿½ï¿½";
         String fraseSinvocal= "";
         int longitudVocales = vocales.length();
 

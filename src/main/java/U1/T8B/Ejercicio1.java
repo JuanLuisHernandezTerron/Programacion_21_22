@@ -1,7 +1,7 @@
 package U1.T8B;
-//Realiza el control de acceso a una caja fuerte. La combinación será un número de 4 cifras. El programa nos pedirá la
-// combinación para abrirla. Si no acertamos, se nos mostrará el mensaje “Lo siento, esa no es la combinacion” y si
-// acertamos se nos dirá “La caja fuerte se ha abierto satisfactoriamente”. Tendremos cuatro oportunidades para abrir
+//Realiza el control de acceso a una caja fuerte. La combinaciï¿½n serï¿½ un nï¿½mero de 4 cifras. El programa nos pedirï¿½ la
+// combinaciï¿½n para abrirla. Si no acertamos, se nos mostrarï¿½ el mensaje ï¿½Lo siento, esa no es la combinacionï¿½ y si
+// acertamos se nos dirï¿½ ï¿½La caja fuerte se ha abierto satisfactoriamenteï¿½. Tendremos cuatro oportunidades para abrir
 // la caja fuerte.
 
 import java.util.Scanner;
