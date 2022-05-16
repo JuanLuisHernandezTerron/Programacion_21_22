@@ -8,11 +8,11 @@ public class Ej1Prueba {
 
         Scanner teclado = new Scanner(System.in);
         
-        int [] arrayVacio = {1,2,3,4,5,6}; // Se pone as√≠ cuando el array tienes que rellenarlo sin introducir datos por terminal.
-        int [] arrayVacio2 = new int[0]; // Se pone as√≠ cuando el array tienes que rellenarlo introduciendo los datos por terminal.
-        int [] arrayVacio3 = rellenarArray(teclado); //As√≠ es cuando quieres rellenar un array con una funci√≥n.
+        int [] arrayVacio = {1,2,3,4,5,6}; // Se pone asÌ cuando el array tienes que rellenarlo sin introducir datos por terminal.
+        int [] arrayVacio2 = new int[0]; // Se pone asÌ cuando el array tienes que rellenarlo introduciendo los datos por terminal.
+        int [] arrayVacio3 = rellenarArray(teclado); //AsÌ es cuando quieres rellenar un array con una funciÛn.
 
-        System.out.println(Arrays.toString(arrayVacio3)); //As√≠n mostramos por pantalla un array
+        System.out.println(Arrays.toString(arrayVacio3)); //AsÌn mostramos por pantalla un array
     }
 
     private static int[] rellenarArray(Scanner teclado) {
@@ -22,7 +22,7 @@ public class Ej1Prueba {
             int numeros = teclado.nextInt();
 
             arrayVacio[i]=numeros; //De esta forma estaremos introduciendo los numero que estamos escribiendo por la terminal en el array.
-            // !!!NO UTILIZAR arrayVacio[i]=arrayVacio[i] + numeros !! YA QUE SE SOBREESCRIBIR√çA.
+            // !!!NO UTILIZAR arrayVacio[i]=arrayVacio[i] + numeros !! YA QUE SE SOBREESCRIBIRÕA.
         }
         return arrayVacio;
     }

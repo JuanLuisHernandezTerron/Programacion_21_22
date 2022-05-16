@@ -32,14 +32,15 @@ public class main {
         arrayFutbolista.add(f11);
         Gson gson = new Gson();
 
-        for (int i = 0; i < arrayFutbolista.size(); i++) {
+        for (int i = 0; i < arrayFutbolista.size(); i++) {  //Escribir un JSON desde un array
             String json_completo = gson.toJson(arrayFutbolista.get(i));
             System.out.println(json_completo);
         }
         System.out.println("---------------------------------------------------");
         String json_completo = gson.toJson(arrayFutbolista);
-        ArrayList<String> posicionesRamos = new ArrayList<>();
+        ArrayList<String> posicionesRamos = new ArrayList<>(); //Llenar un array desde un JSON
         Futbolista[] arrayFutbolistaAUX = gson.fromJson(json_completo, Futbolista[].class);
+        System.out.println("------------------------------------------------");
         for (int i = 0; i < arrayFutbolistaAUX.length; i++) {
             System.out.println(arrayFutbolistaAUX[i].toString());
             if (arrayFutbolistaAUX[i].getNombre().equalsIgnoreCase("SergioRamos")){

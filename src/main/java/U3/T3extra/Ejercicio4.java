@@ -3,10 +3,10 @@ package U3.T3extra;
 import java.util.Arrays;
 import java.util.Scanner;
 
-//Escribe un programa que, dada una posici√≥n en un tablero de ajedrez, nos diga a qu√© casillas podr√≠a
-// saltar un alfil que se encuentra en esa posici√≥n. Como se indica en la figura, el alfil se mueve
+//Escribe un programa que, dada una posiciÛn en un tablero de ajedrez, nos diga a quÈ casillas podrÌa
+// saltar un alfil que se encuentra en esa posiciÛn. Como se indica en la figura, el alfil se mueve
 // siempre en diagonal. El tablero cuenta con64 casillas. Las columnas se indican con las letras de la
-// ‚Äúa‚Äù a la ‚Äúh‚Äù y las filas se indican del 1 al 8.
+// ìaî a la ìhî y las filas se indican del 1 al 8.
 public class Ejercicio4 {
     public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);
@@ -14,7 +14,7 @@ public class Ejercicio4 {
     String [][] arrayAjedrez = new String[8][8];
     rellenarArray(arrayAjedrez);
 
-        System.out.println("Dime la posici√≥n del alfil: ");
+        System.out.println("Dime la posiciÛn del alfil: ");
         String alfil = teclado.nextLine();
         String letraNumero = alfil.substring(0,1);
         int enteroRest = Integer.parseInt(alfil.substring(1,2));
