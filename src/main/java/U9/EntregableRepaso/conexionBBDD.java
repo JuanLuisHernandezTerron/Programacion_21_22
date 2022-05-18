@@ -1,6 +1,5 @@
-package U9.ExamenRepaso;
+package U9.EntregableRepaso;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -16,5 +15,15 @@ public class conexionBBDD {
             System.out.println(ex.getStackTrace());
         }
         return con;
+    }
+
+    public void close(){
+        try {
+            if (con != null) {
+                con.close();
+            }
+        }catch (SQLException ex){
+            ex.printStackTrace();
+        }
     }
 }
