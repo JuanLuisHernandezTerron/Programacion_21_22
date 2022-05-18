@@ -131,7 +131,6 @@ public class ProcessPosts {
         Node guid = doc.createElement("guid");
         guid.setTextContent(post.getGuid());
         pos.appendChild(guid);
-
     }
 
     public static void parseDOM(String filename) {

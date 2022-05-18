@@ -19,6 +19,8 @@ public class main {
         }catch (ParserConfigurationException | IOException | SAXException ex){
             System.out.println(ex.getStackTrace());
         }
+
+        personSax.mostrarArray();
     }
 
 

@@ -15,7 +15,7 @@ public class main {
             SAXParserFactory dbf = SAXParserFactory.newInstance();
             SAXParser db = dbf.newSAXParser();
             DefaultHandler catlogosax = new catalogoSAX();
-            db.parse(new File("C:\\Users\\juanlu\\Desktop\\Programacion_21_22\\src\\main\\java\\U8\\T1\\ejercicioRepaso\\SAX\\Ej1\\Ej4\\catalogos.xml"),catlogosax);
+            db.parse(new File("C:\\Users\\juanlu\\Desktop\\Programacion_21_22\\src\\main\\java\\U8\\T1\\ejercicioRepaso\\SAX\\Ej4SAXBueno\\catalogos.xml"),catlogosax);
         }catch (IOException | ParserConfigurationException | SAXException ex){
             System.out.println(ex.getStackTrace());
         }

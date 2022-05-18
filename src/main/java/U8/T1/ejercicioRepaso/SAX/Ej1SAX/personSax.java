@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class personSax extends DefaultHandler {
     private int contadorAtributo = 0;
     private int contadorPersona = 0;
-    private ArrayList<persona> arrayPersonas = new ArrayList<>();
+    private static ArrayList<persona> arrayPersonas = new ArrayList<>();
 
     public personSax() { //Siempre el constructor
         super();
@@ -68,5 +68,9 @@ public class personSax extends DefaultHandler {
         return "personSax{" +
                 "arrayPersonas=" + arrayPersonas +
                 '}';
+    }
+
+    public static void mostrarArray(){
+        System.out.println(arrayPersonas);
     }
 }

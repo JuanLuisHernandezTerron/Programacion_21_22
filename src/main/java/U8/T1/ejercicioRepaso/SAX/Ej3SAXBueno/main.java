@@ -15,7 +15,7 @@ public class main {
             SAXParserFactory dbf = SAXParserFactory.newInstance();
             SAXParser db = dbf.newSAXParser();
             DefaultHandler comidaSax = new comidaSAX();
-            db.parse(new File("C:\\Users\\juanlu\\Desktop\\Programacion_21_22\\src\\main\\java\\U8\\T1\\ejercicioRepaso\\SAX\\Ej1\\Ej3SAXBueno\\almuerzo.xml"),comidaSax); //cojer el absolute path
+            db.parse(new File("C:\\Users\\juanlu\\Desktop\\Programacion_21_22\\src\\main\\java\\U8\\T1\\ejercicioRepaso\\SAX\\Ej3SAXBueno\\almuerzo.xml"),comidaSax); //cojer el absolute path
         }catch (SAXException | IOException | ParserConfigurationException ex){
             System.out.println(ex.getStackTrace());
         }
