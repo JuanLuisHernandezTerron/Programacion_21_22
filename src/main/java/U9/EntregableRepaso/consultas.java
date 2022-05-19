@@ -17,10 +17,10 @@ public class consultas {
                     "ON c.customerNumber = p.customerNumber " +
                     "WHERE p.customerNumber="+numeroCliente+";");
             while (rs.next()){
-                System.out.println("Su nombre es"+rs.getString("contactFirstName")+", su segundo nombre es "+rs.getString("contactLastName")+", su ciudad es"+rs.getString("city")+", y la suma total de los pagos "+rs.getInt("SumaTotalCliente"));
+                System.out.println("Su nombre es "+rs.getString("contactFirstName")+", su segundo nombre es "+rs.getString("contactLastName")+", su ciudad es "+rs.getString("country")+", y la suma total de los pagos es "+rs.getInt("SumaTotalCliente"));
             }
         }catch (SQLException ex){
-            System.out.println(ex.getStackTrace());
+            ex.getStackTrace();
         }
     }
 }
