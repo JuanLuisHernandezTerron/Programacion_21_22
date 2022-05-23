@@ -1,4 +1,4 @@
-package U9.ExamenRepaso;
+package U9.RepasosExamen.ExamenRepaso;
 
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;

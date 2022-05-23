@@ -1,4 +1,4 @@
-package U9.ExamenRepaso.SQL;
+package U9.RepasosExamen.ExamenRepaso.SQL;
 
 import com.google.gson.Gson;
 
@@ -13,6 +13,7 @@ public class consultas {
 
     public static List<Office> MostrarOficinas(){
         ArrayList<Office> listaOficinas = new ArrayList<>();
+
         try{
             Connection c = conexionBBDD.getConexion();
             PreparedStatement preparedStatement = c.prepareStatement("select * from offices");

@@ -1,4 +1,4 @@
-package U9.ExamenRepaso;
+package U9.RepasosExamen.ExamenRepaso;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

@@ -1,4 +1,4 @@
-package U9.ExamenRepaso;
+package U9.RepasosExamen.ExamenRepaso;
 
 public class Libro {
     private String titulo;

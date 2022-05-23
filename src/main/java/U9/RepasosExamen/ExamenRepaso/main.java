@@ -1,6 +1,4 @@
-package U9.ExamenRepaso;
-
-import java.util.ArrayList;
+package U9.RepasosExamen.ExamenRepaso;
 
 public class main {
     public static void main(String[] args) {

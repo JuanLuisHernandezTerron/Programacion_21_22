@@ -1,4 +1,4 @@
-package U9.ExamenRepaso.SQL;
+package U9.RepasosExamen.ExamenRepaso.SQL;
 
 import U9.T2.ConexionBBDD;
 

@@ -12,7 +12,7 @@ public class consultas {
     public static void informeCategorias() {
         try {
             System.out.println("Dime el nombre de una categoria");
-            String categoria = teclado.nextLine();
+            String categoria = teclado.next();
             Connection c = conexionDB.getConection();
             PreparedStatement preparedStatement = c.prepareStatement("SELECT pr.productName,o.quantityOrdered,o.priceEach " +
                     "FROM products pr " +
@@ -25,7 +25,6 @@ public class consultas {
             while (rs.next()) {
                 System.out.println("El nombre del producto es: " + rs.getString("productName") + ", su cantidad es:" + rs.getInt("quantityOrdered") + ", y su precio es:" + rs.getDouble("priceEach"));
             }
-            conexionDB.close();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
@@ -47,7 +46,6 @@ public class consultas {
             while (rs.next()) {
                 System.out.println("El id del cliente es :" + rs.getInt("customerNumber") + ", su checkNumber es " + rs.getString("checkNumber") + ", la fecha en que hizo el pago fue " + rs.getDate("paymentDate") + " y su cantidad es: " + rs.getDouble("amount"));
             }
-            conexionDB.close();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
@@ -66,7 +64,6 @@ public class consultas {
             while (rs.next()) {
                 System.out.println("El nombre de producto es: " + rs.getString("productName") + " y su precio es " + rs.getDouble("buyPrice"));
             }
-            conexionDB.close();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }

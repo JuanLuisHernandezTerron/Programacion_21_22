@@ -1,10 +1,7 @@
 package U9.U9_Entregable;
 
-import U9.ExamenRepaso.SQL.Office;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Transacciones {
