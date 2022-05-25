@@ -10,8 +10,8 @@ public class mainPrincipal {
         System.out.println("-------------------");
         consultas.informeCategorias();
         System.out.println("-------------------");
-//        Transacciones.insertarEmpleClient();
+        Transacciones.insertarEmpleClient();
         System.out.println("-------------------");
-//       Transacciones.insertOfiActuEmple();
+        Transacciones.insertOfiActuEmple();
     }
 }
