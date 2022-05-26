@@ -13,7 +13,7 @@ public class RecorridoSTAX {
     public static void librosMAXPag() {
         try {
             XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
-            XMLEventReader xmlEventReader = xmlInputFactory.createXMLEventReader(new FileInputStream("/home/juanlu/Escritorio/Programacion_21_22/src/main/java/U9/RepasosExamen/ExamenRepaso/libros.xml"));
+            XMLEventReader xmlEventReader = xmlInputFactory.createXMLEventReader(new FileInputStream("C:\\Users\\juanlu\\Desktop\\Programacion_21_22\\src\\main\\java\\U9\\RepasosExamen\\ExamenRepaso2\\libros.xml"));
             String etiqueta = null;
             Characters character = null;
             String titulo = "";

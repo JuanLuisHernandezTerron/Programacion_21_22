@@ -90,7 +90,7 @@ public class RecorrerDOM {
             for (int i = 0; i < listaLibro.getLength(); i++) {
                 Node capitulos = doc.createElement("capitulos");
                 capitulos.setTextContent("6");
-                listaLibro.item(i).appendChild(capitulos);
+                listaLibro.item(i).appendChild(capitulos); // se lo anade a todos los libros
             }
 
             TransformerFactory tf = TransformerFactory.newInstance();
